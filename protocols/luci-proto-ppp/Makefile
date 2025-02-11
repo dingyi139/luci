@@ -6,7 +6,7 @@
 
 include $(TOPDIR)/rules.mk
 
-LUCI_TITLE:=Support for PPP/PPPoE/PPPoA/PPtP
+LUCI_TITLE:=Support for PPPoE
 LUCI_DEPENDS:=
 
 PKG_LICENSE:=Apache-2.0
