@@ -1,4 +1,4 @@
--- Copyright 2013 Steven Barth <steven@midlink.org>
+-- Copyright (C) 2018 DingYi <dingyi139@gmail.com>
 -- Licensed to the public under the Apache License 2.0.
 
 local map, section, net = ...
@@ -25,14 +25,12 @@ o.default = "auto"
 
 
 o = section:taboption("advanced", Flag, "defaultroute",
-	translate("Use default gateway"),
-	translate("If unchecked, no default route is configured"))
+	translate("Use default gateway"))
 o.default = o.enabled
 
 
 o = section:taboption("advanced", Flag, "peerdns",
-	translate("Use DNS servers advertised by peer"),
-	translate("If unchecked, the advertised DNS server addresses are ignored"))
+	translate("Use DNS servers advertised by peer"))
 o.default = o.enabled
 
 
