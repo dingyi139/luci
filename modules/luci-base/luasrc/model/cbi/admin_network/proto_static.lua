@@ -13,7 +13,7 @@ ipaddr.datatype = "ip4addr"
 
 
 netmask = section:taboption("general", Value, "netmask",
-	translate("IPv4 netmask"))
+	translate("IPv4 mask"))
 
 netmask.datatype = "ip4addr"
 netmask:value("255.255.255.0")
@@ -38,14 +38,12 @@ dns.cast     = "string"
 
 if luci.model.network:has_ipv6() then
 
-	local ip6assign = section:taboption("general", Value, "ip6assign", translate("IPv6 assignment length"),
-		translate("Assign a part of given length of every public IPv6-prefix to this interface"))
+	local ip6assign = section:taboption("general", Value, "ip6assign", translate("IPv6 assignment length"))
 	ip6assign:value("", translate("disabled"))
 	ip6assign:value("64")
 	ip6assign.datatype = "max(64)"
 
-	local ip6hint = section:taboption("general", Value, "ip6hint", translate("IPv6 assignment hint"),
-		translate("Assign prefix parts using this hexadecimal subprefix ID for this interface."))
+	local ip6hint = section:taboption("general", Value, "ip6hint", translate("IPv6 assignment hint"))
 	for i=33,64 do ip6hint:depends("ip6assign", i) end
 
 	ip6addr = section:taboption("general", Value, "ip6addr", translate("IPv6 address"))
@@ -58,16 +56,11 @@ if luci.model.network:has_ipv6() then
 	ip6gw:depends("ip6assign", "")
 
 
-	local ip6prefix = s:taboption("general", Value, "ip6prefix", translate("IPv6 routed prefix"),
-		translate("Public prefix routed to this device for distribution to clients."))
+	local ip6prefix = s:taboption("general", Value, "ip6prefix", translate("IPv6 routed prefix"))
 	ip6prefix.datatype = "ip6addr"
 	ip6prefix:depends("ip6assign", "")
 
-	local ip6ifaceid = s:taboption("general", Value, "ip6ifaceid", translate("IPv6 suffix"),
-		translate("Optional. Allowed values: 'eui64', 'random', fixed value like '::1' " ..
-			"or '::1:2'. When IPv6 prefix (like 'a:b:c:d::') is received from a " ..
-			"delegating server, use the suffix (like '::1') to form the IPv6 address " ..
-			"('a:b:c:d::1') for the interface."))
+	local ip6ifaceid = s:taboption("general", Value, "ip6ifaceid", translate("IPv6 suffix"))
 	ip6ifaceid.datatype = "ip6hostid"
 	ip6ifaceid.placeholder = "::1"
 	ip6ifaceid.rmempty = true
