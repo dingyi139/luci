@@ -1,26 +1,16 @@
--- Copyright 2011 Jo-Philipp Wich <jow@openwrt.org>
+-- Copyright (C) 2018 DingYi <dingyi139@gmail.com>
 -- Licensed to the public under the Apache License 2.0.
 
 local netmod = luci.model.network
 
 local _, p
-for _, p in ipairs({"ppp", "pptp", "pppoe", "pppoa", "l2tp", "pppossh"}) do
+for _, p in ipairs({"pppoe"}) do
 
 	local proto = netmod:register_protocol(p)
 
 	function proto.get_i18n(self)
-		if p == "ppp" then
-			return luci.i18n.translate("PPP")
-		elseif p == "pptp" then
-			return luci.i18n.translate("PPtP")
-		elseif p == "pppoe" then
+		if p == "pppoe" then
 			return luci.i18n.translate("PPPoE")
-		elseif p == "pppoa" then
-			return luci.i18n.translate("PPPoATM")
-		elseif p == "l2tp" then
-			return luci.i18n.translate("L2TP")
-		elseif p == "pppossh" then
-			return luci.i18n.translate("PPPoSSH")
 		end
 	end
 
@@ -29,34 +19,14 @@ for _, p in ipairs({"ppp", "pptp", "pppoe", "pppoa", "l2tp", "pppossh"}) do
 	end
 
 	function proto.opkg_package(self)
-		if p == "ppp" then
-			return p
-		elseif p == "pptp" then
-			return "ppp-mod-pptp"
-		elseif p == "pppoe" then
+		if p == "pppoe" then
 			return "ppp-mod-pppoe"
-		elseif p == "pppoa" then
-			return "ppp-mod-pppoa"
-		elseif p == "l2tp" then
-			return "xl2tpd"
-		elseif p == "pppossh" then
-			return "pppossh"
 		end
 	end
 
 	function proto.is_installed(self)
-		if p == "pppoa" then
-			return (nixio.fs.glob("/usr/lib/pppd/*/pppoatm.so")() ~= nil)
-		elseif p == "pppoe" then
+		if p == "pppoe" then
 			return (nixio.fs.glob("/usr/lib/pppd/*/rp-pppoe.so")() ~= nil)
-		elseif p == "pptp" then
-			return (nixio.fs.glob("/usr/lib/pppd/*/pptp.so")() ~= nil)
-		elseif p == "l2tp" then
-			return nixio.fs.access("/lib/netifd/proto/l2tp.sh")
-		elseif p == "pppossh" then
-			return nixio.fs.access("/lib/netifd/proto/pppossh.sh")
-		else
-			return nixio.fs.access("/lib/netifd/proto/ppp.sh")
 		end
 	end
 
