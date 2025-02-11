@@ -1,4 +1,4 @@
--- Copyright 2011 Jo-Philipp Wich <jow@openwrt.org>
+-- Copyright (C) 2018 DingYi <dingyi139@gmail.com>
 -- Licensed to the public under the Apache License 2.0.
 
 local map, section, net = ...
@@ -16,23 +16,20 @@ password.password = true
 
 
 ac = section:taboption("general", Value, "ac",
-	translate("Access Concentrator"),
-	translate("Leave empty to autodetect"))
+	translate("Access Concentrator"))
 
 ac.placeholder = translate("auto")
 
 
 service = section:taboption("general", Value, "service",
-	translate("Service Name"),
-	translate("Leave empty to autodetect"))
+	translate("Service Name"))
 
 service.placeholder = translate("auto")
 
 
 if luci.model.network:has_ipv6() then
 	ipv6 = section:taboption("advanced", ListValue, "ipv6",
-		translate("Obtain IPv6-Address"),
-		translate("Enable IPv6 negotiation on the PPP link"))
+		translate("Obtain IPv6-Address"))
 	ipv6:value("auto", translate("Automatic"))
 	ipv6:value("0", translate("Disabled"))
 	ipv6:value("1", translate("Manual"))
@@ -41,8 +38,7 @@ end
 
 
 defaultroute = section:taboption("advanced", Flag, "defaultroute",
-	translate("Use default gateway"),
-	translate("If unchecked, no default route is configured"))
+	translate("Use default gateway"))
 
 defaultroute.default = defaultroute.enabled
 
@@ -56,8 +52,7 @@ metric:depends("defaultroute", defaultroute.enabled)
 
 
 peerdns = section:taboption("advanced", Flag, "peerdns",
-	translate("Use DNS servers advertised by peer"),
-	translate("If unchecked, the advertised DNS server addresses are ignored"))
+	translate("Use DNS servers advertised by peer"))
 
 peerdns.default = peerdns.enabled
 
@@ -71,8 +66,7 @@ dns.cast     = "string"
 
 
 keepalive_failure = section:taboption("advanced", Value, "_keepalive_failure",
-	translate("LCP echo failure threshold"),
-	translate("Presume peer to be dead after given amount of LCP echo failures, use 0 to ignore failures"))
+	translate("LCP echo failure threshold"))
 
 function keepalive_failure.cfgvalue(self, section)
 	local v = m:get(section, "keepalive")
@@ -86,8 +80,7 @@ keepalive_failure.datatype    = "uinteger"
 
 
 keepalive_interval = section:taboption("advanced", Value, "_keepalive_interval",
-	translate("LCP echo interval"),
-	translate("Send LCP echo requests at the given interval in seconds, only effective in conjunction with failure threshold"))
+	translate("LCP echo interval"))
 
 function keepalive_interval.cfgvalue(self, section)
 	local v = m:get(section, "keepalive")
@@ -115,16 +108,14 @@ keepalive_interval.datatype    = "min(1)"
 
 
 host_uniq = section:taboption("advanced", Value, "host_uniq",
-	translate("Host-Uniq tag content"),
-	translate("Raw hex-encoded bytes. Leave empty unless your ISP require this"))
+	translate("Host-Uniq tag content"))
 
 host_uniq.placeholder = translate("auto")
 host_uniq.datatype    = "hex"
 
 
 demand = section:taboption("advanced", Value, "demand",
-	translate("Inactivity timeout"),
-	translate("Close inactive connection after the given amount of seconds, use 0 to persist connection"))
+	translate("Inactivity timeout"))
 
 demand.placeholder = "0"
 demand.datatype    = "uinteger"
