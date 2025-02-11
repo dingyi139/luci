@@ -16,22 +16,19 @@ hostname.datatype    = "hostname"
 
 
 bcast = section:taboption("advanced", Flag, "broadcast",
-	translate("Use broadcast flag"),
-	translate("Required for certain ISPs, e.g. Charter with DOCSIS 3"))
+	translate("Use broadcast flag"))
 
 bcast.default = bcast.disabled
 
 
 defaultroute = section:taboption("advanced", Flag, "defaultroute",
-	translate("Use default gateway"),
-	translate("If unchecked, no default route is configured"))
+	translate("Use default gateway"))
 
 defaultroute.default = defaultroute.enabled
 
 
 peerdns = section:taboption("advanced", Flag, "peerdns",
-	translate("Use DNS servers advertised by peer"),
-	translate("If unchecked, the advertised DNS server addresses are ignored"))
+	translate("Use DNS servers advertised by peer"))
 
 peerdns.default = peerdns.enabled
 
