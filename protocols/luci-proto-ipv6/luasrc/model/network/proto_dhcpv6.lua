@@ -1,4 +1,4 @@
--- Copyright 2013 Jo-Philipp Wich <jow@openwrt.org>
+-- Copyright (C) 2018 DingYi <dingyi139@gmail.com>
 -- Licensed to the public under the Apache License 2.0.
 
 local proto = luci.model.network:register_protocol("dhcpv6")
