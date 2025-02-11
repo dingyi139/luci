@@ -1,0 +1,42 @@
+msgid "Allow guests"
+msgstr "匿名"
+
+msgid "Allowed users"
+msgstr "允许用户"
+
+msgid "Browseable"
+msgstr "浏览"
+
+msgid "Create mask"
+msgstr "创建权限"
+
+msgid "Description"
+msgstr "描述"
+
+msgid "Directory mask"
+msgstr "目录权限"
+
+msgid "Edit Template"
+msgstr "编辑模板"
+
+msgid "General Settings"
+msgstr "基本设置"
+
+msgid "Hostname"
+msgstr "主机名"
+
+msgid "Share name"
+msgstr "共享名"
+
+msgid "Network Shares"
+msgstr "网络共享"
+
+msgid "Path"
+msgstr "目录"
+
+msgid "Read-only"
+msgstr "只读"
+
+msgid "Workgroup"
+msgstr "工作组"
+

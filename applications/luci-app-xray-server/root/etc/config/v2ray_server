@@ -1,0 +1,16 @@
+
+config global
+	option enable '0'
+
+config user
+	option enable '0'
+	option remarks '127.0.0.1'
+	option protocol 'vmess'
+	option port '20010'
+	list uuid '2222e595-1e20-4cc7-8b6d-da68c33ea03a'
+	option level '1'
+	option tls '0'
+	option transport 'tcp'
+	option tcp_guise 'none'
+	option accept_lan '0'
+

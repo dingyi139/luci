@@ -1,0 +1,179 @@
+msgid "NAS"
+msgstr "网络存储"
+
+msgid "ASCII mode"
+msgstr "ASCII 模式"
+
+msgid "Allow directory recursely list"
+msgstr "递归列目录"
+
+msgid "Anonymous Settings"
+msgstr "匿名用户设置"
+
+msgid "Virtual User Settings"
+msgstr "认证用户设置"
+
+msgid "Anonymous User"
+msgstr "匿名用户"
+
+msgid "Both download and upload"
+msgstr "下载和上传"
+
+msgid "Connection Settings"
+msgstr "连接设置"
+
+msgid "Connection timeout"
+msgstr "连接超时"
+
+msgid "Data Port"
+msgstr "数据端口"
+
+msgid "Data connection timeout"
+msgstr "数据连接超时"
+
+msgid "Directory message filename"
+msgstr "目录消息文件名"
+
+msgid "Download only"
+msgstr "仅下载"
+
+msgid "Enable IPv4"
+msgstr "启用 IPv4"
+
+msgid "Enable IPv6"
+msgstr "启用 IPv6"
+
+msgid "Enable PASV mode"
+msgstr "被动模式"
+
+msgid "Enable PORT mode"
+msgstr "主动模式"
+
+msgid "Enable directory list"
+msgstr "允许列目录"
+
+msgid "Enable directory message"
+msgstr "启用目录消息"
+
+msgid "Enable download"
+msgstr "允许下载"
+
+msgid "Enable file log"
+msgstr "文件日志"
+
+msgid "Enable local user"
+msgstr "启用"
+
+msgid "Enable other rights"
+msgstr "允许删除/重命名"
+
+msgid "Enable syslog"
+msgstr "系统日志"
+
+msgid "Enable upload"
+msgstr "允许上传"
+
+msgid "Enable write"
+msgstr "允许写"
+
+msgid "Enable write/mkdir"
+msgstr "允许写/创建目录"
+
+msgid "FTP Banner"
+msgstr "FTP 欢迎提示"
+
+msgid "FTP Server"
+msgstr "FTP 服务器"
+
+msgid "FTP Server - Anonymous Settings"
+msgstr "FTP 服务器 - 匿名用户"
+
+msgid "FTP Server - Log Settings"
+msgstr "FTP 服务器 - 日志"
+
+msgid "FTP Server - Virtual User %q"
+msgstr "FTP 服务器 - 认证用户 %q"
+
+msgid "FTP Server - Virtual User &lt;new&gt;"
+msgstr "FTP 服务器 - 认证用户 &lt;新用户&gt;"
+
+msgid "FTP Server - Virtual User Settings"
+msgstr "FTP 服务器 - 认证用户"
+
+msgid "File mode umask"
+msgstr "文件权限掩码"
+
+msgid "General Settings"
+msgstr "常规设置"
+
+msgid "Global Settings"
+msgstr "全局设置"
+
+msgid "Home directory"
+msgstr "主目录"
+
+msgid "IPv4 Address"
+msgstr "IPv4 地址"
+
+msgid "IPv6 Address"
+msgstr "IPv6 地址"
+
+msgid "Idle session timeout"
+msgstr "空闲超时"
+
+msgid "Listen Port"
+msgstr "监听端口"
+
+msgid "Listening Settings"
+msgstr "监听设置"
+
+msgid "Local Users"
+msgstr "本地用户"
+
+msgid "Log Settings"
+msgstr "日志设置"
+
+msgid "Log file"
+msgstr "日志文件"
+
+msgid "Max clients"
+msgstr "最大连接数"
+
+msgid "Max clients per IP"
+msgstr "同一 IP 最大连接数"
+
+msgid "Max login fail count"
+msgstr "最大登录尝试数"
+
+msgid "Max transmit rate"
+msgstr "最大传输速率"
+
+msgid "Root directory"
+msgstr "根目录"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Show dot files"
+msgstr "显示隐藏文件"
+
+msgid "Upload only"
+msgstr "仅上传"
+
+msgid "User Settings"
+msgstr "用户设置"
+
+msgid "User lists"
+msgstr "用户列表"
+
+msgid "Username cannot be empty"
+msgstr "用户名不能为空"
+
+msgid "Virtual Users"
+msgstr "认证用户"
+
+msgid "Pasv Min Port"
+msgstr "被动模式最小端口"
+
+msgid "Pasv Max Port"
+msgstr "被动模式最大端口"

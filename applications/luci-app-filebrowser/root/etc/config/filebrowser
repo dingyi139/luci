@@ -1,0 +1,7 @@
+
+config global
+	option port '7002'
+	option root_path '/mnt/sda3/files/share/'
+	option project_directory '/mnt/sda3/files'
+	option enable '0'
+

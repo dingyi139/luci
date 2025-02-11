@@ -1,0 +1,461 @@
+msgid "%s in %s"
+msgstr "%s 位于 %s"
+
+msgid "%s%s with %s"
+msgstr "%s%s 和 %s"
+
+msgid "%s, %s in %s"
+msgstr "%s, %s 位于 %s"
+
+msgid "(Unnamed Entry)"
+msgstr "（未命名条目）"
+
+msgid "(Unnamed Rule)"
+msgstr "（未命名规则）"
+
+msgid "(Unnamed SNAT)"
+msgstr "（未命名 SNAT）"
+
+msgid "<var>%d</var> pkts. per <var>%s</var>"
+msgstr "<var>%d</var> 数据包/<var>%s</var>"
+
+msgid "<var>%d</var> pkts. per <var>%s</var>, burst <var>%d</var> pkts."
+msgstr "<var>%d</var> 数据包/<var>%s</var>，突发 <var>%d</var> 数据包。"
+
+msgid "<var>%s</var> and limit to %s"
+msgstr "<var>%s</var> 并限制 %s"
+
+msgid "Accept forward"
+msgstr "接受转发"
+
+msgid "Accept input"
+msgstr "接受入站"
+
+msgid "Accept output"
+msgstr "接受出站"
+
+msgid "Action"
+msgstr "动作"
+
+msgid "Add"
+msgstr "添加"
+
+msgid "Add and edit..."
+msgstr "添加并编辑..."
+
+msgid "Advanced Settings"
+msgstr "高级设置"
+
+msgid "Allow forward from <em>source zones</em>:"
+msgstr "允许从源区域转发："
+
+msgid "Allow forward to <em>destination zones</em>:"
+msgstr "允许转发到目标区域："
+
+msgid "Any"
+msgstr "任何"
+
+msgid "Covered networks"
+msgstr "覆盖网络"
+
+msgid "Custom Rules"
+msgstr "自定义规则"
+
+msgid "Destination IP address"
+msgstr "目标 IP 地址"
+
+msgid "Destination address"
+msgstr "目标地址"
+
+msgid "Destination port"
+msgstr "目标端口"
+
+msgid "Destination zone"
+msgstr "目标区域"
+
+msgid "Disable"
+msgstr "禁用"
+
+msgid "Discard forward"
+msgstr "丢弃转发"
+
+msgid "Discard input"
+msgstr "丢弃入站"
+
+msgid "Discard output"
+msgstr "丢弃出站"
+
+msgid "Do not rewrite"
+msgstr "不重写"
+
+msgid "Do not track forward"
+msgstr "不跟踪转发"
+
+msgid "Do not track input"
+msgstr "不跟踪入站"
+
+msgid "Do not track output"
+msgstr "不跟踪出站"
+
+msgid "Drop invalid packets"
+msgstr "丢弃无效数据包"
+
+msgid "Enable"
+msgstr "启用"
+
+msgid "Enable NAT Loopback"
+msgstr "启用 NAT 环回"
+
+msgid "Enable SYN-flood protection"
+msgstr "启用 DDoS 防御"
+
+msgid "Enable logging on this zone"
+msgstr "启用此区域的日志记录"
+
+msgid "External IP address"
+msgstr "外部 IP 地址"
+
+msgid "External port"
+msgstr "外部端口"
+
+msgid "External zone"
+msgstr "外部区域"
+
+msgid "Extra arguments"
+msgstr "附加参数"
+
+msgid "Firewall"
+msgstr "防火墙"
+
+msgid "Firewall - Custom Rules"
+msgstr "防火墙 - 自定义规则"
+
+msgid "Firewall - Port Forwards"
+msgstr "防火墙 - 端口转发"
+
+msgid "Firewall - Traffic Rules"
+msgstr "防火墙 - 通信规则"
+
+msgid "Firewall - Zone Settings"
+msgstr "防火墙 - 区域设置"
+
+msgid "Force connection tracking"
+msgstr "强制连接追踪"
+
+msgid "Forward"
+msgstr "转发"
+
+msgid "Forward to"
+msgstr "转发到"
+
+msgid "Friday"
+msgstr "星期五"
+
+msgid "From %s in %s"
+msgstr "来自 %s 于 %s"
+
+msgid "From %s in %s with source %s"
+msgstr "来自 %s 于 %s 源于 %s"
+
+msgid "From %s in %s with source %s and %s"
+msgstr "来自 %s 于 %s 源端口 %s 源 MAC %s"
+
+msgid "From %s on <var>this device</var>"
+msgstr "来自 %s 在<var>此设备</var>上"
+
+msgid "From %s on <var>this device</var> with source %s"
+msgstr "来自 %s 在<var>此设备</var>上源于 %s"
+
+msgid "From %s on <var>this device</var> with source %s and %s"
+msgstr "来自 %s 在<var>此设备</var>上源端口 %s 源 MAC %s"
+
+msgid "General Settings"
+msgstr "基本设置"
+
+msgid "Hardware flow offloading"
+msgstr "硬件流量分载"
+
+msgid "IP range"
+msgstr "IP 范围"
+
+msgid "IPs"
+msgstr "IP"
+
+msgid "IPv4 and IPv6"
+msgstr "IPv4 和 IPv6"
+
+msgid "IPv4 only"
+msgstr "仅 IPv4"
+
+msgid "IPv6 only"
+msgstr "仅 IPv6"
+
+msgid "Input"
+msgstr "入站数据"
+
+msgid "Inter-Zone Forwarding"
+msgstr "端口触发"
+
+msgid "Internal IP address"
+msgstr "内部 IP 地址"
+
+msgid "Internal port"
+msgstr "内部端口"
+
+msgid "Internal zone"
+msgstr "内部区域"
+
+msgid "Limit log messages"
+msgstr "限制日志信息"
+
+msgid "MACs"
+msgstr "MAC"
+
+msgid "MSS clamping"
+msgstr "MSS 钳制"
+
+msgid "Masquerading"
+msgstr "IP 动态伪装"
+
+msgid "Match"
+msgstr "匹配规则"
+
+msgid "Match ICMP type"
+msgstr "匹配 ICMP 类型"
+
+msgid "Monday"
+msgstr "星期一"
+
+msgid "Month Days"
+msgstr "日期"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "New SNAT rule"
+msgstr "新建 SNAT 规则"
+
+msgid "New forward rule"
+msgstr "新建转发规则"
+
+msgid "New input rule"
+msgstr "新建进入规则"
+
+msgid "New port forward"
+msgstr "新建端口转发"
+
+msgid "New source NAT"
+msgstr "新建 Source NAT"
+
+msgid "Open ports on router"
+msgstr "打开路由器端口"
+
+msgid "Other..."
+msgstr "其它..."
+
+msgid "Output"
+msgstr "出站数据"
+
+msgid "Output zone"
+msgstr "出站区域"
+
+msgid "Port Forwards"
+msgstr "端口转发"
+
+msgid "Protocol"
+msgstr "协议"
+
+msgid "Refuse forward"
+msgstr "拒绝转发"
+
+msgid "Refuse input"
+msgstr "拒绝入站"
+
+msgid "Refuse output"
+msgstr "拒绝出站"
+
+msgid "Restart Firewall"
+msgstr "重启防火墙"
+
+msgid "Restrict Masquerading to given destination subnets"
+msgstr "要限制 IP 动态伪装的目标子网"
+
+msgid "Restrict Masquerading to given source subnets"
+msgstr "要限制 IP 动态伪装的源子网"
+
+msgid "Restrict to address family"
+msgstr "限制地址"
+
+msgid "Rewrite to source %s"
+msgstr "源地址改写成 %s"
+
+msgid "Rewrite to source %s, %s"
+msgstr "源地址改写成 %s, %s"
+
+msgid "Routing/NAT Offloading"
+msgstr "路由/转发"
+
+msgid "Rule is disabled"
+msgstr "规则已禁用"
+
+msgid "Rule is enabled"
+msgstr "规则已启用"
+
+msgid "SNAT IP address"
+msgstr "SNAT IP 地址"
+
+msgid "SNAT port"
+msgstr "SNAT 端口"
+
+msgid "Saturday"
+msgstr "星期六"
+
+msgid "Software flow offloading"
+msgstr "软件流量分载"
+
+msgid "Source IP address"
+msgstr "源 IP 地址"
+
+msgid "Source MAC address"
+msgstr "源 MAC 地址"
+
+msgid "Source NAT"
+msgstr "源地址转换"
+
+msgid "Source address"
+msgstr "源地址"
+
+msgid "Source port"
+msgstr "源端口"
+
+msgid "Source zone"
+msgstr "源区域"
+
+msgid "Start Date (yyyy-mm-dd)"
+msgstr "开始日期（yyyy-mm-dd）"
+
+msgid "Start Time (hh:mm:ss)"
+msgstr "开始时间（hh:mm:ss）"
+
+msgid "Stop Date (yyyy-mm-dd)"
+msgstr "停止日期（yyyy-mm-dd）"
+
+msgid "Stop Time (hh:mm:ss)"
+msgstr "停止时间（hh:mm:ss）"
+
+msgid "Sunday"
+msgstr "星期日"
+
+msgid "Thursday"
+msgstr "星期四"
+
+msgid "Time in UTC"
+msgstr "UTC 时间"
+
+msgid "To %s at %s on <var>this device</var>"
+msgstr "到 %s 在 %s 于<var>本设备</var>"
+
+msgid "To %s in %s"
+msgstr "到 %s 于 %s"
+
+msgid "To %s on <var>this device</var>"
+msgstr "到 %s 于<var>本设备</var>"
+
+msgid "To %s, %s in %s"
+msgstr "到 %s, %s 于 %s"
+
+msgid "To source IP"
+msgstr "到源 IP"
+
+msgid "To source port"
+msgstr "到源端口"
+
+msgid "Traffic Rules"
+msgstr "通信规则"
+
+msgid "Tuesday"
+msgstr "星期二"
+
+msgid "Unnamed SNAT"
+msgstr "未命名的 SNAT"
+
+msgid "Unnamed forward"
+msgstr "未命名的转发"
+
+msgid "Unnamed rule"
+msgstr "未命名的规则"
+
+msgid "Via %s"
+msgstr "通过 %s"
+
+msgid "Via %s at %s"
+msgstr "通过 %s 在 %s"
+
+msgid "Wednesday"
+msgstr "星期三"
+
+msgid "Week Days"
+msgstr "星期"
+
+msgid "Zone %q"
+msgstr "区域 %q"
+
+msgid "Zone ⇒ Forwardings"
+msgstr "区域 ⇒ 转发"
+
+msgid "Zones"
+msgstr "区域"
+
+msgid "accept"
+msgstr "接受"
+
+msgid "any"
+msgstr "所有"
+
+msgid "any host"
+msgstr "所有主机"
+
+msgid "any router IP"
+msgstr "所有路由 IP"
+
+msgid "any zone"
+msgstr "所有区域"
+
+msgid "day"
+msgstr "日"
+
+msgid "don't track"
+msgstr "不跟踪"
+
+msgid "drop"
+msgstr "丢弃"
+
+msgid "hour"
+msgstr "小时"
+
+msgid "minute"
+msgstr "分钟"
+
+msgid "not"
+msgstr "非"
+
+msgid "port"
+msgstr "端口"
+
+msgid "ports"
+msgstr "端口"
+
+msgid "reject"
+msgstr "拒绝"
+
+msgid "second"
+msgstr "秒"
+
+msgid "traffic"
+msgstr "通信"
+
+msgid "type"
+msgstr "类型"
+
+msgid "types"
+msgstr "类型"

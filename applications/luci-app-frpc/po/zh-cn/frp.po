@@ -1,0 +1,230 @@
+msgid "Frp Setting"
+msgstr "内网穿透"
+
+msgid "NOT RUNNING"
+msgstr "未运行"
+
+msgid "RUNNING"
+msgstr "运行中"
+
+msgid "Basic Settings"
+msgstr "基本设置"
+
+msgid "Other Settings"
+msgstr "其他设置"
+
+msgid "Client Log"
+msgstr "日志"
+
+msgid "Enabled"
+msgstr "启用"
+
+msgid "Server"
+msgstr "服务器"
+
+msgid "Port"
+msgstr "端口"
+
+msgid "Token"
+msgstr "令牌"
+
+msgid "User"
+msgstr "用户名"
+
+msgid "Vhost HTTP Port"
+msgstr "HTTP 端口"
+
+msgid "Vhost HTTPS Port"
+msgstr "HTTPS 端口"
+
+msgid "Exit program when first login failed"
+msgstr "失败退出"
+
+msgid "TCP Stream Multiplexing"
+msgstr "端口复用"
+
+msgid "Use TLS Connection"
+msgstr "加密连接"
+
+msgid "Protocol Type"
+msgstr "协议类型"
+
+msgid "TCP Protocol"
+msgstr "TCP 协议"
+
+msgid "KCP Protocol"
+msgstr "KCP 协议"
+
+msgid "Connect frps by HTTP PROXY"
+msgstr "代理连接"
+
+msgid "HTTP PROXY"
+msgstr "HTTP 代理"
+
+msgid "Enable Connection Pool"
+msgstr "启用连接池"
+
+msgid "Connection Pool"
+msgstr "预创建连接数量"
+
+msgid "Service registration interval"
+msgstr "注册间隔分钟"
+
+msgid "Logging Level"
+msgstr "日志记录等级"
+
+msgid "Trace"
+msgstr "追踪"
+
+msgid "Debug"
+msgstr "调试"
+
+msgid "Info"
+msgstr "信息"
+
+msgid "Warning"
+msgstr "警告"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "Log Keepd Max Days"
+msgstr "日志记录天数"
+
+msgid "Enable Web API"
+msgstr "启用网页管理"
+
+msgid "Admin Web Port"
+msgstr "端口"
+
+msgid "Admin Web UserName"
+msgstr "用户"
+
+msgid "Admin Web PassWord"
+msgstr "密码"
+
+msgid "Services List"
+msgstr "服务列表"
+
+msgid "Service Remark Name"
+msgstr "备注"
+
+msgid "Domain/Subdomain"
+msgstr "域名 / 子域名"
+
+msgid "Remote Port"
+msgstr "远程端口"
+
+msgid "Local Host Address"
+msgstr "内网地址"
+
+msgid "Local Host Port"
+msgstr "内网端口"
+
+msgid "Use Encryption"
+msgstr "加密"
+
+msgid "Use Compression"
+msgstr "压缩"
+
+msgid "Enable State"
+msgstr "状态"
+
+msgid "Frp Domain Config"
+msgstr "Frp 配置"
+
+msgid "Config Frp Protocol"
+msgstr "配置 Frp 协议参数"
+
+msgid "Disable"
+msgstr "关闭"
+
+msgid "Frp Protocol Type"
+msgstr "协议类型"
+
+msgid "Domain Type"
+msgstr "域名类型"
+
+msgid "Custom Domains"
+msgstr "自定义域名"
+
+msgid "SubDomain"
+msgstr "子域名"
+
+msgid "Both the above two Domain types"
+msgstr "同时使用2种域名"
+
+msgid "STCP Role"
+msgstr "STCP 服务类型"
+
+msgid "XTCP Role"
+msgstr "XTCP 服务类型"
+
+msgid "Use Plugin"
+msgstr "使用插件"
+
+msgid "STCP Screct Key"
+msgstr "STCP 密钥"
+
+msgid "STCP Server Name"
+msgstr "STCP 服务名称"
+
+msgid "XTCP Screct Key"
+msgstr "XTCP 密钥"
+
+msgid "XTCP Server Name"
+msgstr "XTCP 服务名称"
+
+msgid "Enable URL routing"
+msgstr "启用 URL 路由"
+
+msgid "Choose Plugin"
+msgstr "选择插件"
+
+msgid "Proxy Authentication"
+msgstr "代理认证"
+
+msgid "HTTP Proxy UserName"
+msgstr "HTTP 代理用户名"
+
+msgid "HTTP Proxy Password"
+msgstr "HTTP 代理密码"
+
+msgid "Plugin Unix Sock Path"
+msgstr "Unix Sock 插件路径"
+
+msgid "Password protecting your web service"
+msgstr "密码保护 web 服务"
+
+msgid "HTTP UserName"
+msgstr "HTTP 用户名"
+
+msgid "HTTP PassWord"
+msgstr "HTTP 密码"
+
+msgid "Rewriting the Host Header"
+msgstr "修改 Host Header"
+
+msgid "Proxy-Protocol Version"
+msgstr "协议版本"
+
+msgid "STCP Server Name is Service Remark Name of STCP Server"
+msgstr "STCP 服务器别名"
+
+msgid "XTCP Server Name is Service Remark Name of XTCP Server"
+msgstr "XTCP 服务器别名"
+
+msgid "Plugin_Local_Addr"
+msgstr "插件本地地址"
+
+msgid "plugin_crt_path"
+msgstr "插件证书路径"
+
+msgid "plugin_key_path"
+msgstr "插件私钥路径"
+
+msgid "plugin_host_header_rewrite"
+msgstr "插件 Host Header 重写"
+
+msgid "plugin_header_X-From-Where"
+msgstr "插件 X-From-Where 请求头"

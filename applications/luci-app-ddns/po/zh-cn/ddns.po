@@ -1,0 +1,311 @@
+msgid "-- custom --"
+msgstr "-- 自定义 --"
+
+msgid "-- default --"
+msgstr "-- 默认 --"
+
+msgid "Advanced Settings"
+msgstr "高级设置"
+
+msgid "Allow non-public IP's"
+msgstr "允许非公网 IP"
+
+msgid "Applying changes"
+msgstr "正在应用更改"
+
+msgid "Basic Settings"
+msgstr "基础设置"
+
+msgid "Bind Network"
+msgstr "使用的接口"
+
+msgid "Change provider"
+msgstr "更改提供者"
+
+msgid "Check Interval"
+msgstr "检查时间周期"
+
+msgid "Force Interval"
+msgstr "强制更新周期"
+
+msgid "Collecting data..."
+msgstr "正在收集数据…"
+
+msgid "Configuration"
+msgstr "配置"
+
+msgid "Current setting"
+msgstr "当前设置"
+
+msgid "Custom update-URL"
+msgstr "自定义更新 URL"
+
+msgid "Custom update-script"
+msgstr "自定义更新脚本"
+
+msgid "DDNS Service provider"
+msgstr "服务提供商"
+
+msgid "DNS-Server"
+msgstr "DNS 服务器"
+
+msgid "Date format"
+msgstr "日期格式"
+
+msgid "Details for"
+msgstr "详情"
+
+msgid "Disabled"
+msgstr "已禁用"
+
+msgid "Domain"
+msgstr "域名"
+
+msgid "Dynamic DNS"
+msgstr "动态域名"
+
+msgid "Enabled"
+msgstr "已启用"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "Error Retry Counter"
+msgstr "错误重试计数"
+
+msgid "Error Retry Interval"
+msgstr "错误重试间隔"
+
+msgid "Event Network"
+msgstr "事件网络"
+
+msgid "File"
+msgstr "文件"
+
+msgid "File not found"
+msgstr "文件未找到"
+
+msgid "File not found or empty"
+msgstr "文件未找到或为空"
+
+msgid "Force IP Version"
+msgstr "强制设定 IP 版本"
+
+msgid "Force TCP on DNS"
+msgstr "使用 TCP 进行 DNS 查询"
+
+msgid "Forced IP Version don't matched"
+msgstr "强制设定的 IP 版本不匹配"
+
+msgid "Format"
+msgstr "格式"
+
+msgid "Format: IP or FQDN"
+msgstr "格式：IP 或者 FQDN"
+
+msgid "Global Settings"
+msgstr "全局设置"
+
+msgid "HTTPS not supported"
+msgstr "不支持 HTTPS"
+
+msgid "Hints"
+msgstr "提示"
+
+msgid "Hostname/FQDN to validate, if IP update happen or necessary"
+msgstr "主机名 /FQDN 验证"
+
+msgid "IP address source"
+msgstr "来源"
+
+msgid "IP address version"
+msgstr "IP 地址版本"
+
+msgid "IPv4-Address"
+msgstr "IPv4 地址"
+
+msgid "IPv6 not supported"
+msgstr "IPv6 不被支持"
+
+msgid "IPv6-Address"
+msgstr "IPv6 地址"
+
+msgid "Info"
+msgstr "信息"
+
+msgid "Interface"
+msgstr "接口"
+
+msgid "Last Update"
+msgstr "上次更新"
+
+msgid "Loading"
+msgstr "加载中"
+
+msgid "Log File Viewer"
+msgstr "日志查看器"
+
+msgid "Log directory"
+msgstr "日志目录"
+
+msgid "Log length"
+msgstr "日志长度"
+
+msgid "Log to file"
+msgstr "把日志记录到文件"
+
+msgid "Log to syslog"
+msgstr "记录日志到 syslog"
+
+msgid "Lookup Hostname"
+msgstr "查询主机名"
+
+msgid "NOT installed"
+msgstr "未安装"
+
+msgid "Network"
+msgstr "网络"
+
+msgid "Never"
+msgstr "从不"
+
+msgid "Next Update"
+msgstr "下次更新"
+
+msgid "No certificates found"
+msgstr "找不到证书"
+
+msgid "No data"
+msgstr "无数据"
+
+msgid "No logging"
+msgstr "无日志"
+
+msgid "Notice"
+msgstr "注意"
+
+msgid "Overview"
+msgstr "概览"
+
+msgid "PROXY-Server"
+msgstr "代理服务器"
+
+msgid "Password"
+msgstr "密码"
+
+msgid "Path to CA-Certificate"
+msgstr "CA 证书路径"
+
+msgid "Please [Save & Apply] your changes first"
+msgstr "请先保存并应用您的设置"
+
+msgid "Please press [Read] button"
+msgstr "请按下 [读取] 按钮"
+
+msgid "Process ID"
+msgstr "进程 ID"
+
+msgid "Read / Reread log file"
+msgstr "读取/重新读取 日志文件"
+
+msgid "Really change DDNS provider?"
+msgstr "确定更改 DDNS 提供商吗？"
+
+msgid "Registered IP"
+msgstr "已注册的 IP 地址"
+
+msgid "Run once"
+msgstr "运行一次"
+
+msgid "Script"
+msgstr "脚本"
+
+msgid "Start"
+msgstr "启动"
+
+msgid "Start / Stop"
+msgstr "启动 / 停止"
+
+msgid "Status directory"
+msgstr "状态目录"
+
+msgid "Stopped"
+msgstr "已停止"
+
+msgid "There is no service configured."
+msgstr "没有已配置的服务项"
+
+msgid "Timer Settings"
+msgstr "计时器设定"
+
+msgid "To change global settings click here"
+msgstr "更改全局设置"
+
+msgid "URL to detect"
+msgstr "用于检测的 URL"
+
+msgid "Unknown error"
+msgstr "未知错误"
+
+msgid "Use HTTP Secure"
+msgstr "使用 HTTPS"
+
+msgid "Use cURL"
+msgstr "使用 cURL"
+
+msgid "Username"
+msgstr "用户名"
+
+msgid "Verify"
+msgstr "验证"
+
+msgid "Version"
+msgstr "版本"
+
+msgid "Version Information"
+msgstr "版本信息"
+
+msgid "Waiting for changes to be applied..."
+msgstr "正在应用更改…"
+
+msgid "Warning"
+msgstr "警告"
+
+msgid "can not detect local IP. Please select a different Source combination"
+msgstr "无法确定本地 IP，请更换 IP 来源"
+
+msgid "can not resolve host:"
+msgstr "无法解析主机："
+
+msgid "config error"
+msgstr "配置错误"
+
+msgid "days"
+msgstr "天"
+
+msgid "hours"
+msgstr "小时"
+
+msgid "installed"
+msgstr "已安装"
+
+msgid "minutes"
+msgstr "分钟"
+
+msgid "never"
+msgstr "从不"
+
+msgid "no data"
+msgstr "无数据"
+
+msgid "or"
+msgstr "或者"
+
+msgid "seconds"
+msgstr "秒"
+
+msgid "unknown error"
+msgstr "未知错误"
+
+msgid "unspecific error"
+msgstr "未指定的错误"

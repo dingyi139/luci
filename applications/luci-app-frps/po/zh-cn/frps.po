@@ -1,0 +1,134 @@
+msgid "Frp Server"
+msgstr "穿透服务"
+
+msgid "Advanced Options"
+msgstr "高级选项"
+
+msgid "Bind port"
+msgstr "端口"
+
+msgid "Client file"
+msgstr "执行文件"
+
+msgid "Frps - Common Settings"
+msgstr "通用设置"
+
+msgid "Dashboard Options"
+msgstr "面板选项"
+
+msgid "Dashboard addr"
+msgstr "绑定地址"
+
+msgid "Dashboard password"
+msgstr "密码"
+
+msgid "Dashboard port"
+msgstr "面板端口"
+
+msgid "Dashboard user"
+msgstr "用户名"
+
+msgid "Debug"
+msgstr "调试"
+
+msgid "Disable log color"
+msgstr "禁用日志颜色"
+
+msgid "Enable logging"
+msgstr "启用日志"
+
+msgid "Enabled"
+msgstr "启用"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "Frps - Server Settings"
+msgstr "服务器设定"
+
+msgid "FRPS Server Settings"
+msgstr "Frps 服务器设定"
+
+msgid "General Options"
+msgstr "常规选项"
+
+msgid "Info"
+msgstr "信息"
+
+msgid "KCP bind port"
+msgstr "KCP 端口"
+
+msgid "Log file"
+msgstr "日志文件"
+
+msgid "Log level"
+msgstr "日志等级"
+
+msgid "Log max days"
+msgstr "保存天数"
+
+msgid "Max pool count"
+msgstr "最大连接数"
+
+msgid "Max ports per-client"
+msgstr "端口映射数"
+
+msgid "Not Running"
+msgstr "服务未运行"
+
+msgid "Run daemon as user"
+msgstr "运行身份"
+
+msgid "Server"
+msgstr "服务端"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Subdomain host"
+msgstr "子域名"
+
+msgid "TCP mux"
+msgstr "端口复用"
+
+msgid "Enforce frps only accept TLS connection"
+msgstr "加密连接"
+
+msgid "Token"
+msgstr "令牌"
+
+msgid "Trace"
+msgstr "追踪"
+
+msgid "UDP bind port"
+msgstr "UDP 端口"
+
+msgid "Log level"
+msgstr "日志等级"
+
+msgid "Trace"
+msgstr "追踪"
+
+msgid "Debug"
+msgstr "调试"
+
+msgid "Info"
+msgstr "信息"
+
+msgid "Warning"
+msgstr "警告"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "vhost http port"
+msgstr "HTTP 端口"
+
+msgid "vhost https port"
+msgstr "HTTPS 端口"
+
+msgid "Extra Settings"
+msgstr "额外设置项"
+
+msgid "Open Frps page"
+msgstr "管理面板"

@@ -1,0 +1,35 @@
+msgid "OpenVPN Server"
+msgstr "OpenVPN 服务器"
+
+msgid "Base Setting"
+msgstr "基本设置"
+
+msgid "Enable"
+msgstr "启用"
+
+msgid "Port"
+msgstr "端口"
+
+msgid "WAN DDNS or IP"
+msgstr "WAN IP / 域名"
+
+msgid "Client Network"
+msgstr "客户端网段分配"
+
+msgid "Client Settings"
+msgstr "客户端推送配置"
+
+msgid "OpenVPN Client config file"
+msgstr "客户端配置文件"
+
+msgid "Download .ovpn file"
+msgstr "下载 .ovpn 配置文件"
+
+msgid "Special Code"
+msgstr "特殊代码"
+
+msgid "OpenVPN status"
+msgstr "OpenVPN 服务器运行状态"
+
+msgid "Proto"
+msgstr "协议"

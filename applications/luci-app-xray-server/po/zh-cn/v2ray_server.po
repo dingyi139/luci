@@ -1,0 +1,176 @@
+msgid "V2ray Server"
+msgstr "V2ray 服务器"
+
+msgid "Global Settings"
+msgstr "全局设置"
+
+msgid "Manually update"
+msgstr "检查更新"
+
+msgid "Auth"
+msgstr "授权"
+
+msgid "Path"
+msgstr "路径"
+
+msgid "KCP MTU"
+msgstr "KCP 最大传输单元"
+
+msgid "KCP TTI"
+msgstr "KCP 传输时间间隔"
+
+msgid "KCP uplinkCapacity"
+msgstr "KCP 上传容量"
+
+msgid "KCP downlinkCapacity"
+msgstr "KCP 下行容量"
+
+msgid "KCP Congestion"
+msgstr "KCP 拥塞"
+
+msgid "KCP readBufferSize"
+msgstr "KCP 读取缓存"
+
+msgid "KCP writeBufferSize"
+msgstr "KCP 写入缓存"
+
+msgid "KCP Seed"
+msgstr "KCP 种子"
+
+msgid "flow"
+msgstr "流控"
+
+msgid "Encrypt Password"
+msgstr "加密密码"
+
+msgid "Server Config"
+msgstr "服务器配置"
+
+msgid "Users Manager"
+msgstr "配置管理"
+
+msgid "Remarks"
+msgstr "备注"
+
+msgid "Bind Local"
+msgstr "本机监听"
+
+msgid "Port"
+msgstr "端口"
+
+msgid "User name"
+msgstr "用户名"
+
+msgid "Password"
+msgstr "密码"
+
+msgid "Protocol"
+msgstr "协议"
+
+msgid "Null"
+msgstr "无"
+
+msgid "UUID"
+msgstr "标识符"
+
+msgid "Alter ID"
+msgstr "额外ID"
+
+msgid "User Level"
+msgstr "用户等级"
+
+msgid "Transport"
+msgstr "传输方式"
+
+msgid "Camouflage Type"
+msgstr "伪装类型"
+
+msgid "Use HTTPS"
+msgstr "使用 HTTPS"
+
+msgid "TLS Settings"
+msgstr "TLS 配置"
+
+msgid "Public key absolute path"
+msgstr "公钥文件绝对路径"
+
+msgid "Private key absolute path"
+msgstr "私钥文件绝对路径"
+
+msgid "Accept LAN Access"
+msgstr "局域网访问"
+
+msgid "Logs"
+msgstr "日志"
+
+msgid "Clear logs"
+msgstr "清空日志"
+
+msgid "Get remote version info failed."
+msgstr "获取远程版本信息失败"
+
+msgid "New version found, but failed to get new version download url."
+msgstr "发现新版本，但未能获得新版本的下载地址。"
+
+msgid "Download url is required."
+msgstr "请指定下载地址"
+
+msgid "File download failed or timed out: %s"
+msgstr "文件下载失败或超时：%s"
+
+msgid "File path required."
+msgstr "请指定文件路径"
+
+msgid "Client file is required."
+msgstr "请指定客户端文件"
+
+msgid "Can't move new file to path: %s"
+msgstr "无法移动新文件到：%s"
+
+msgid "Update..."
+msgstr "更新中"
+
+msgid "It is the latest version"
+msgstr "已是最新版本"
+
+msgid "Update successful"
+msgstr "更新成功"
+
+msgid "Click to update"
+msgstr "点击更新"
+
+msgid "Updating..."
+msgstr "更新中"
+
+msgid "Unexpected error"
+msgstr "意外错误"
+
+msgid "Updating, are you sure to close?"
+msgstr "正在更新，你确认要关闭吗？"
+
+msgid "Downloading..."
+msgstr "下载中"
+
+msgid "Unpacking..."
+msgstr "解压中"
+
+msgid "Moving..."
+msgstr "移动中"
+
+msgid "Enabled"
+msgstr "启用"
+
+msgid "Tick ​​Select"
+msgstr "勾选"
+
+msgid "Status"
+msgstr "状态"
+
+msgid "Current Condition"
+msgstr "当前状态"
+
+msgid "NOT RUNNING"
+msgstr "未运行"
+
+msgid "RUNNING"
+msgstr "运行中"

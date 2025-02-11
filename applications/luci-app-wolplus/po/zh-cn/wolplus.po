@@ -1,0 +1,20 @@
+msgid "WOL Plus"
+msgstr "网络唤醒"
+
+msgid "macclient"
+msgstr "客户端设备列表"
+
+msgid "name"
+msgstr "名称"
+
+msgid "macaddr"
+msgstr "MAC 地址"
+
+msgid "maceth"
+msgstr "网络接口"
+
+msgid "awake"
+msgstr "唤醒"
+
+msgid "Please [Save & Apply] your changes first"
+msgstr "请先保存并应用您的设置"

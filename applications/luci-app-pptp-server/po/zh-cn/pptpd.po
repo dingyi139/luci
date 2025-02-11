@@ -1,0 +1,62 @@
+msgid "PPTP VPN Server"
+msgstr "PPTP 服务器"
+
+msgid "Current Condition"
+msgstr "当前状态"
+
+msgid "General settings"
+msgstr "基本设置"
+
+msgid "Enable VPN Server"
+msgstr "启用"
+
+msgid "Server IP"
+msgstr "服务器 IP 地址"
+
+msgid "Client IP"
+msgstr "客户端 IP 地址"
+
+msgid "Enable MPPE Encryption"
+msgstr "点对点加密"
+
+msgid "Users Manager"
+msgstr "用户管理"
+
+msgid "Enabled"
+msgstr "启用"
+
+msgid "Tick ​​Select"
+msgstr "勾选"
+
+msgid "User name"
+msgstr "用户名"
+
+msgid "Password"
+msgstr "密码"
+
+msgid "IP address"
+msgstr "IP 地址"
+
+msgid "Automatically"
+msgstr "自动分配"
+
+msgid "Online Users"
+msgstr "在线用户"
+
+msgid "Blacklist"
+msgstr "黑名单"
+
+msgid "Add to Blacklist"
+msgstr "加入黑名单"
+
+msgid "Remove from Blacklist"
+msgstr "移出黑名单"
+
+msgid "Forced offline"
+msgstr "强制下线"
+
+msgid "NOT RUNNING"
+msgstr "未运行"
+
+msgid "RUNNING"
+msgstr "运行中"

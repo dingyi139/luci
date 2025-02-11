@@ -1,0 +1,24 @@
+msgid "KMS Server"
+msgstr "微软激活"
+
+msgid "Basic Setting"
+msgstr "基本设置"
+
+msgid "Config File"
+msgstr "配置文件"
+
+msgid "RUNNING"
+msgstr "运行中"
+
+msgid "NOT RUNNING"
+msgstr "未运行"
+
+msgid "Collecting data..."
+msgstr "收集数据..."
+
+msgid "Enable"
+msgstr "启用"
+
+msgid "Auto activate"
+msgstr "自动激活局域网客户端"
+

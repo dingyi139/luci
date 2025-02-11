@@ -1,0 +1,2 @@
+msgid "File Assistant"
+msgstr "文件助手"
