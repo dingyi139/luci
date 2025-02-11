@@ -19,16 +19,16 @@ function index()
 	end
 
 	entry({"admin", "system", "startup"}, form("admin_system/startup"), _("Startup"), 45)
-	entry({"admin", "system", "crontab"}, form("admin_system/crontab"), _("Scheduled Tasks"), 46)
+	entry({"admin", "system", "crontab"}, form("admin_system/crontab"), _("Scheduled Tasks"), 50)
 
 	if fs.access("/sbin/block") and fs.access("/etc/config/fstab") then
-		entry({"admin", "system", "fstab"}, cbi("admin_system/fstab"), _("Mount Points"), 50)
+		entry({"admin", "system", "fstab"}, cbi("admin_system/fstab"), _("Mount Points"), 46)
 		entry({"admin", "system", "fstab", "mount"}, cbi("admin_system/fstab/mount"), nil).leaf = true
 		entry({"admin", "system", "fstab", "swap"},  cbi("admin_system/fstab/swap"),  nil).leaf = true
 	end
 
 	local nodes, number = fs.glob("/sys/class/leds/*")
-	if number > 0 then
+	if number < 0 then
 		entry({"admin", "system", "leds"}, cbi("admin_system/leds"), _("<abbr title=\"Light Emitting Diode\">LED</abbr> Configuration"), 60)
 	end
 
@@ -295,7 +295,7 @@ function action_sysupgrade()
 		luci.template.render("admin_system/applyreboot", {
 			title = luci.i18n.translate("Flashing..."),
 			msg   = luci.i18n.translate("The system is flashing now.<br /> DO NOT POWER OFF THE DEVICE!<br /> Wait a few minutes before you try to reconnect. It might be necessary to renew the address of your computer to reach the device again, depending on your settings."),
-			addr  = (#keep > 0) and "192.168.1.1" or nil
+			addr  = (#keep > 0) and "192.168.8.1" or nil
 		})
 		fork_exec("sleep 1; killall dropbear uhttpd; sleep 1; /sbin/sysupgrade %s %q" %{ keep, image_tmp })
 	end
@@ -363,7 +363,7 @@ function action_reset()
 		luci.template.render("admin_system/applyreboot", {
 			title = luci.i18n.translate("Erasing..."),
 			msg   = luci.i18n.translate("The system is erasing the configuration partition now and will reboot itself when finished."),
-			addr  = "192.168.1.1"
+			addr  = "192.168.8.1"
 		})
 
 		fork_exec("sleep 1; killall dropbear uhttpd; sleep 1; jffs2reset -y && reboot")
