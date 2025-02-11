@@ -37,18 +37,15 @@ mount:tab("advanced", translate("Advanced Settings"))
 mount:taboption("general", Flag, "enabled", translate("Enable this swap")).rmempty = false
 
 
-o = mount:taboption("general", Value, "device", translate("Device"),
-	translate("The device file of the memory or partition (<abbr title=\"for example\">e.g.</abbr> <code>/dev/sda1</code>)"))
+o = mount:taboption("general", Value, "device", translate("Device"))
 
 for i, d in ipairs(devices) do
 	o:value(d, size[d] and "%s (%s MB)" % {d, size[d]})
 end
 
-o = mount:taboption("advanced", Value, "uuid", translate("UUID"),
-	translate("If specified, mount the device by its UUID instead of a fixed device node"))
+o = mount:taboption("advanced", Value, "uuid", translate("UUID"))
 
-o = mount:taboption("advanced", Value, "label", translate("Label"),
-	translate("If specified, mount the device by the partition label instead of a fixed device node"))
+o = mount:taboption("advanced", Value, "label", translate("Label"))
 
 
 return m

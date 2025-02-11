@@ -13,7 +13,7 @@ m = SimpleForm("luci", translate("Backup file list"))
 m:append(Template("admin_system/backupfiles"))
 
 if luci.http.formvalue("display") ~= "list" then
-	f = m:section(SimpleSection, nil, translate("This is a list of shell glob patterns for matching files and directories to include during sysupgrade. Modified files in /etc/config/ and certain other configurations are automatically preserved."))
+	f = m:section(SimpleSection, nil)
 
 	l = f:option(Button, "_list", translate("Show current backup file list"))
 	l.inputtitle = translate("Open list...")
@@ -43,7 +43,7 @@ else
 	m.submit = false
 	m.reset  = false
 
-	f = m:section(SimpleSection, nil, translate("Below is the determined list of files to backup. It consists of changed configuration files marked by opkg, essential base files and the user defined backup patterns."))
+	f = m:section(SimpleSection, nil)
 
 	l = f:option(Button, "_edit", translate("Back to configuration"))
 	l.inputtitle = translate("Close list...")

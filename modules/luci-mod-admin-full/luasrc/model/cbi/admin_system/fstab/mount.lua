@@ -53,8 +53,7 @@ mount:tab("advanced", translate("Advanced Settings"))
 mount:taboption("general", Flag, "enabled", translate("Enable this mount")).rmempty = false
 
 
-o = mount:taboption("general", Value, "uuid", translate("UUID"),
-	translate("If specified, mount the device by its UUID instead of a fixed device node"))
+o = mount:taboption("general", Value, "uuid", translate("UUID"))
 
 o:value("", translate("-- match by uuid --"))
 
@@ -67,8 +66,7 @@ for i, d in ipairs(devices) do
 end
 
 
-o = mount:taboption("general", Value, "label", translate("Label"),
-	translate("If specified, mount the device by the partition label instead of a fixed device node"))
+o = mount:taboption("general", Value, "label", translate("Label"))
 
 o:value("", translate("-- match by label --"))
 
@@ -83,8 +81,7 @@ for i, d in ipairs(devices) do
 end
 
 
-o = mount:taboption("general", Value, "device", translate("Device"),
-	translate("The device file of the memory or partition (<abbr title=\"for example\">e.g.</abbr> <code>/dev/sda1</code>)"))
+o = mount:taboption("general", Value, "device", translate("Device"))
 
 o:value("", translate("-- match by device --"))
 
@@ -99,8 +96,7 @@ for i, d in ipairs(devices) do
 end
 
 
-o = mount:taboption("general", Value, "target", translate("Mount point"),
-	translate("Specifies the directory the device is attached to"))
+o = mount:taboption("general", Value, "target", translate("Mount point"))
 
 o:value("/", translate("Use as root filesystem (/)"))
 o:value("/overlay", translate("Use as external overlay (/overlay)"))
@@ -123,8 +119,7 @@ umount /tmp/extroot</pre>
 }
 
 
-o = mount:taboption("advanced", Value, "fstype", translate("Filesystem"),
-	translate("The filesystem that was used to format the memory (<abbr title=\"for example\">e.g.</abbr> <samp><abbr title=\"Third Extended Filesystem\">ext3</abbr></samp>)"))
+o = mount:taboption("advanced", Value, "fstype", translate("Filesystem"))
 
 o:value("", "auto")
 
@@ -137,15 +132,13 @@ for fs in io.lines("/proc/filesystems") do
 end
 
 
-o = mount:taboption("advanced", Value, "options", translate("Mount options"),
-	translate("See \"mount\" manpage for details"))
+o = mount:taboption("advanced", Value, "options", translate("Mount options"))
 
 o.placeholder = "defaults"
 
 
 if has_fscheck then
-	o = mount:taboption("advanced", Flag, "enabled_fsck", translate("Run filesystem check"),
-		translate("Run a filesystem check before mounting the device"))
+	o = mount:taboption("advanced", Flag, "enabled_fsck", translate("Run filesystem check"))
 end
 
 return m

@@ -4,8 +4,7 @@
 
 local fs = require "nixio.fs"
 
-m = Map("system", translate("Router Password"),
-	translate("Changes the administrator password for accessing the device"))
+m = Map("system", translate("Router Password"))
 
 s = m:section(TypedSection, "_dummy", "")
 s.addremove = false
@@ -43,31 +42,27 @@ end
 
 if fs.access("/etc/config/dropbear") then
 
-m2 = Map("dropbear", translate("SSH Access"),
-	translate("Dropbear offers <abbr title=\"Secure Shell\">SSH</abbr> network shell access and an integrated <abbr title=\"Secure Copy\">SCP</abbr> server"))
+m2 = Map("dropbear", translate("SSH Access"))
 
 s = m2:section(TypedSection, "dropbear", translate("Dropbear Instance"))
 s.anonymous = true
 s.addremove = true
 
 
-ni = s:option(Value, "Interface", translate("Interface"),
-	translate("Listen only on the given interface or, if unspecified, on all"))
+ni = s:option(Value, "Interface", translate("Interface"))
 
 ni.template    = "cbi/network_netlist"
 ni.nocreate    = true
 ni.unspecified = true
 
 
-pt = s:option(Value, "Port", translate("Port"),
-	translate("Specifies the listening port of this <em>Dropbear</em> instance"))
+pt = s:option(Value, "Port", translate("Port"))
 
 pt.datatype = "port"
 pt.default  = 22
 
 
-pa = s:option(Flag, "PasswordAuth", translate("Password authentication"),
-	translate("Allow <abbr title=\"Secure Shell\">SSH</abbr> password authentication"))
+pa = s:option(Flag, "PasswordAuth", translate("Password authentication"))
 
 pa.enabled  = "on"
 pa.disabled = "off"
@@ -75,24 +70,21 @@ pa.default  = pa.enabled
 pa.rmempty  = false
 
 
-ra = s:option(Flag, "RootPasswordAuth", translate("Allow root logins with password"),
-	translate("Allow the <em>root</em> user to login with password"))
+ra = s:option(Flag, "RootPasswordAuth", translate("Allow root logins with password"))
 
 ra.enabled  = "on"
 ra.disabled = "off"
 ra.default  = ra.enabled
 
 
-gp = s:option(Flag, "GatewayPorts", translate("Gateway ports"),
-	translate("Allow remote hosts to connect to local SSH forwarded ports"))
+gp = s:option(Flag, "GatewayPorts", translate("Gateway ports"))
 
 gp.enabled  = "on"
 gp.disabled = "off"
 gp.default  = gp.disabled
 
 
-s2 = m2:section(TypedSection, "_dummy", translate("SSH-Keys"),
-	translate("Here you can paste public SSH-Keys (one per line) for SSH public-key authentication."))
+s2 = m2:section(TypedSection, "_dummy", translate("SSH-Keys"))
 s2.addremove = false
 s2.anonymous = true
 s2.template  = "cbi/tblsection"

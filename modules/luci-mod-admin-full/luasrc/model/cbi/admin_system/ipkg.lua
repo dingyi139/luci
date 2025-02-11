@@ -6,7 +6,7 @@ local ipkgfile = "/etc/opkg.conf"
 local distfeeds = "/etc/opkg/distfeeds.conf"
 local customfeeds = "/etc/opkg/customfeeds.conf"
 
-f = SimpleForm("ipkgconf", translate("OPKG-Configuration"), translate("General options for opkg"))
+f = SimpleForm("ipkgconf", translate("OPKG-Configuration"))
 
 f:append(Template("admin_system/ipkg"))
 
@@ -25,8 +25,7 @@ function f.handle(self, state, data)
 	return true
 end
 
-g = SimpleForm("distfeedconf", translate("Distribution feeds"),
-	translate("Build/distribution specific feed definitions. This file will NOT be preserved in any sysupgrade."))
+g = SimpleForm("distfeedconf", translate("Distribution feeds"))
 
 d = g:field(TextValue, "lines2")
 d.wrap = "off"
@@ -43,8 +42,7 @@ function g.handle(self, state, data)
 	return true
 end
 
-h = SimpleForm("customfeedconf", translate("Custom feeds"),
-	translate("Custom feed definitions, e.g. private feeds. This file can be preserved in a sysupgrade."))
+h = SimpleForm("customfeedconf", translate("Custom feeds"))
 
 c = h:field(TextValue, "lines3")
 c.wrap = "off"

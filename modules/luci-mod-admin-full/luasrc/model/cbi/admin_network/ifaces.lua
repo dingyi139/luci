@@ -13,7 +13,7 @@ arg[1] = arg[1] or ""
 local has_dnsmasq  = fs.access("/etc/config/dhcp")
 local has_firewall = fs.access("/etc/config/firewall")
 
-m = Map("network", translate("Interfaces") .. " - " .. arg[1]:upper(), translate("On this page you can configure the network interfaces. You can bridge several interfaces by ticking the \"bridge interfaces\" field and enter the names of several network interfaces separated by spaces. You can also use <abbr title=\"Virtual Local Area Network\">VLAN</abbr> notation <samp>INTERFACE.VLANNR</samp> (<abbr title=\"for example\">e.g.</abbr>: <samp>eth0.1</samp>)."))
+m = Map("network", translate("Interfaces") .. " - " .. arg[1]:upper())
 m.redirect = luci.dispatcher.build_url("admin", "network", "network")
 m:chain("wireless")
 m:chain("luci")
@@ -254,27 +254,24 @@ delegate = s:taboption("advanced", Flag, "delegate", translate("Use builtin IPv6
 delegate.default = delegate.enabled
 
 force_link = s:taboption("advanced", Flag, "force_link",
-	translate("Force link"),
-	translate("Set interface properties regardless of the link carrier (If set, carrier sense events do not invoke hotplug handlers)."))
+	translate("Force link"))
 
 force_link.default = (net:proto() == "static") and force_link.enabled or force_link.disabled
 
 
 if not net:is_virtual() then
-	br = s:taboption("physical", Flag, "type", translate("Bridge interfaces"), translate("creates a bridge over specified interface(s)"))
+	br = s:taboption("physical", Flag, "type", translate("Bridge interfaces"))
 	br.enabled = "bridge"
 	br.rmempty = true
 	br:depends("proto", "static")
 	br:depends("proto", "dhcp")
 	br:depends("proto", "none")
 
-	stp = s:taboption("physical", Flag, "stp", translate("Enable <abbr title=\"Spanning Tree Protocol\">STP</abbr>"),
-		translate("Enables the Spanning Tree Protocol on this bridge"))
+	stp = s:taboption("physical", Flag, "stp", translate("Enable <abbr title=\"Spanning Tree Protocol\">STP</abbr>"))
 	stp:depends("type", "bridge")
 	stp.rmempty = true
 
-	igmp = s:taboption("physical", Flag, "igmp_snooping", translate("Enable <abbr title=\"Internet Group Management Protocol\">IGMP</abbr> snooping"),
-		translate("Enables IGMP snooping on this bridge"))
+	igmp = s:taboption("physical", Flag, "igmp_snooping", translate("Enable <abbr title=\"Internet Group Management Protocol\">IGMP</abbr> snooping"))
 	igmp:depends("type", "bridge")
 	igmp.rmempty = true
 end
@@ -354,8 +351,7 @@ end
 
 if has_firewall then
 	fwzone = s:taboption("firewall", Value, "_fwzone",
-		translate("Create / Assign firewall-zone"),
-		translate("Choose the firewall zone you want to assign to this interface. Select <em>unspecified</em> to remove the interface from the associated zone or fill out the <em>create</em> field to define a new zone and attach the interface to it."))
+		translate("Create / Assign firewall-zone"))
 
 	fwzone.template = "cbi/firewall_zonelist"
 	fwzone.network = arg[1]
@@ -468,51 +464,39 @@ if has_dnsmasq and net:proto() == "static" then
 		end
 
 		local ignore = s:taboption("general", Flag, "ignore",
-			translate("Ignore interface"),
-			translate("Disable <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr> for " ..
-				"this interface."))
+			translate("Ignore interface"))
 
-		local start = s:taboption("general", Value, "start", translate("Start"),
-			translate("Lowest leased address as offset from the network address."))
+		local start = s:taboption("general", Value, "start", translate("Start ip"))
 		start.optional = true
 		start.datatype = "or(uinteger,ip4addr)"
 		start.default = "100"
 
-		local limit = s:taboption("general", Value, "limit", translate("Limit"),
-			translate("Maximum number of leased addresses."))
+		local limit = s:taboption("general", Value, "limit", translate("Limit"))
 		limit.optional = true
 		limit.datatype = "uinteger"
 		limit.default = "150"
 
-		local ltime = s:taboption("general", Value, "leasetime", translate("Lease time"),
-			translate("Expiry time of leased addresses, minimum is 2 minutes (<code>2m</code>)."))
+		local ltime = s:taboption("general", Value, "leasetime", translate("Lease time"))
 		ltime.rmempty = true
 		ltime.default = "12h"
 
 		local dd = s:taboption("advanced", Flag, "dynamicdhcp",
-			translate("Dynamic <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr>"),
-			translate("Dynamically allocate DHCP addresses for clients. If disabled, only " ..
-				"clients having static leases will be served."))
+			translate("Dynamic <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr>"))
 		dd.default = dd.enabled
 
-		s:taboption("advanced", Flag, "force", translate("Force"),
-			translate("Force DHCP on this network even if another server is detected."))
+		s:taboption("advanced", Flag, "force", translate("Force"))
 
 		-- XXX: is this actually useful?
 		--s:taboption("advanced", Value, "name", translate("Name"),
 		--	translate("Define a name for this network."))
 
 		mask = s:taboption("advanced", Value, "netmask",
-			translate("<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Netmask"),
-			translate("Override the netmask sent to clients. Normally it is calculated " ..
-				"from the subnet that is served."))
+			translate("Netmask"))
 
 		mask.optional = true
 		mask.datatype = "ip4addr"
 
-		s:taboption("advanced", DynamicList, "dhcp_option", translate("DHCP-Options"),
-			translate("Define additional DHCP options, for example \"<code>6,192.168.2.1," ..
-				"192.168.2.2</code>\" which advertises different DNS servers to clients."))
+		s:taboption("advanced", DynamicList, "dhcp_option", translate("DHCP-Options"))
 
 		for i, n in ipairs(s.children) do
 			if n ~= ignore then
@@ -537,8 +521,7 @@ if has_dnsmasq and net:proto() == "static" then
 		o:value("relay", translate("relay mode"))
 		o:value("hybrid", translate("hybrid mode"))
 
-		o = s:taboption("ipv6", ListValue, "ra_management", translate("DHCPv6-Mode"),
-			translate("Default is stateless + stateful"))
+		o = s:taboption("ipv6", ListValue, "ra_management", translate("DHCPv6-Mode"))
 		o:value("0", translate("stateless"))
 		o:value("1", translate("stateless + stateful"))
 		o:value("2", translate("stateful-only"))
@@ -546,8 +529,7 @@ if has_dnsmasq and net:proto() == "static" then
 		o:depends("dhcpv6", "hybrid")
 		o.default = "1"
 
-		o = s:taboption("ipv6", Flag, "ra_default", translate("Always announce default router"),
-		        translate("Announce as default router even if no public prefix is available."))
+		o = s:taboption("ipv6", Flag, "ra_default", translate("Always announce default router"))
 		o:depends("ra", "server")
 		o:depends("ra", "hybrid")
 

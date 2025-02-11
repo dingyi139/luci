@@ -204,11 +204,7 @@ end
 
 -- Show ATM bridge section if we have the capabilities
 if fs.access("/usr/sbin/br2684ctl") then
-	atm = m:section(TypedSection, "atm-bridge", translate("ATM Bridges"),
-		translate("ATM bridges expose encapsulated ethernet in AAL5 " ..
-			"connections as virtual Linux network interfaces which can " ..
-			"be used in conjunction with DHCP or PPP to dial into the " ..
-			"provider network."))
+	atm = m:section(TypedSection, "atm-bridge", translate("ATM Bridges"))
 
 	atm.addremove = true
 	atm.anonymous = true

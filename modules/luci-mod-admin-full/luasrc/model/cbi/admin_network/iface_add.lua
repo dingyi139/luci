@@ -14,19 +14,13 @@ function m.on_cancel()
 	luci.http.redirect(luci.dispatcher.build_url("admin/network/network"))
 end
 
-newnet = m:field(Value, "_netname", translate("Name of the new interface"),
-	translate("The allowed characters are: <code>A-Z</code>, <code>a-z</code>, " ..
-		"<code>0-9</code> and <code>_</code>"
-	))
+newnet = m:field(Value, "_netname", translate("Name of the new interface"))
 
 newnet:depends("_attach", "")
 newnet.default = arg[1] and "net_" .. arg[1]:gsub("[^%w_]+", "_")
 newnet.datatype = "and(uciname,maxlength(15))"
 
-advice = m:field(DummyValue, "d1", translate("Note: interface name length"),
-	 translate("Maximum length of the name is 15 characters including " ..
-		"the automatic protocol/bridge prefix (br-, 6in4-, pppoe- etc.)"
-	))
+advice = m:field(DummyValue, "d1")
 
 newproto = m:field(ListValue, "_netproto", translate("Protocol of the new interface"))
 

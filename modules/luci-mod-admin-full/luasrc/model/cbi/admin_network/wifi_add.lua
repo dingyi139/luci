@@ -44,8 +44,7 @@ m.hidden = {
 }
 
 if iw and iw.mbssid_support then
-	replace = m:field(Flag, "replace", translate("Replace wireless configuration"),
-		translate("Check this option to delete the existing networks from this radio."))
+	replace = m:field(Flag, "replace", translate("Replace wireless configuration"))
 
 	function replace.cfgvalue() return "0" end
 else
@@ -57,8 +56,7 @@ else
 end
 
 if http.formvalue("wep") == "1" then
-	key = m:field(Value, "key", translate("WEP passphrase"),
-		translate("Specify the secret encryption key here."))
+	key = m:field(Value, "key", translate("WEP passphrase"))
 
 	key.password = true
 	key.datatype = "wepkey"
@@ -66,26 +64,21 @@ if http.formvalue("wep") == "1" then
 elseif (tonumber(m.hidden.wpa_version) or 0) > 0 and
 	(m.hidden.wpa_suites == "PSK" or m.hidden.wpa_suites == "PSK2")
 then
-	key = m:field(Value, "key", translate("WPA passphrase"),
-		translate("Specify the secret encryption key here."))
+	key = m:field(Value, "key", translate("WPA passphrase"))
 
 	key.password = true
 	key.datatype = "wpakey"
 	--m.hidden.wpa_suite = (tonumber(http.formvalue("wpa_version")) or 0) >= 2 and "psk2" or "psk"
 end
 
-newnet = m:field(Value, "_netname_new", translate("Name of the new network"),
-	translate("The allowed characters are: <code>A-Z</code>, <code>a-z</code>, " ..
-		"<code>0-9</code> and <code>_</code>"
-	))
+newnet = m:field(Value, "_netname_new", translate("Name of the new network"))
 
 newnet.default = m.hidden.mode == "Ad-Hoc" and "mesh" or "wwan"
 newnet.datatype = "uciname"
 
 if has_firewall then
 	fwzone = m:field(Value, "_fwzone",
-		translate("Create / Assign firewall-zone"),
-		translate("Choose the firewall zone you want to assign to this interface. Select <em>unspecified</em> to remove the interface from the associated zone or fill out the <em>create</em> field to define a new zone and attach the interface to it."))
+		translate("Create / Assign firewall-zone"))
 
 	fwzone.template = "cbi/firewall_zonelist"
 	fwzone.default = m.hidden.mode == "Ad-Hoc" and "mesh" or "wan"

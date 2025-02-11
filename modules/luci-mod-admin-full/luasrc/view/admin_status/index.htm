@@ -1,6 +1,5 @@
 <%#
- Copyright 2008 Steven Barth <steven@midlink.org>
- Copyright 2008-2011 Jo-Philipp Wich <jow@openwrt.org>
+ Copyright 2008 DingYi <dingyi139@gmail.com>
  Licensed to the public under the Apache License 2.0.
 -%>
 
@@ -369,16 +368,17 @@
 
 	<div class="table" width="100%">
 		<div class="tr"><div class="td left" width="33%"><%:Hostname%></div><div class="td left"><%=luci.sys.hostname() or "?"%></div></div>
-		<div class="tr"><div class="td left" width="33%"><%:Model%></div><div class="td left"><%=pcdata(boardinfo.model or "?")%></div></div>
+		<div class="tr"><div class="td left" width="33%"><%:Model%></div><div class="td left"><%:BayTrail Platform%></div></div>
 		<div class="tr"><div class="td left" width="33%"><%:Architecture%></div><div class="td left"><%=pcdata(boardinfo.system or "?")%></div></div>
 		<div class="tr"><div class="td left" width="33%"><%:Firmware Version%></div><div class="td left">
 			<%=pcdata(ver.distname)%> <%=pcdata(ver.distversion)%> /
-			<%=pcdata(ver.luciname)%> (<%=pcdata(ver.luciversion)%>)
+			<%=pcdata(ver.luciname)%>
 		</div></div>
 		<div class="tr"><div class="td left" width="33%"><%:Kernel Version%></div><div class="td left"><%=unameinfo.release or "?"%></div></div>
 		<div class="tr"><div class="td left" width="33%"><%:Local Time%></div><div class="td left" id="localtime">-</div></div>
 		<div class="tr"><div class="td left" width="33%"><%:Uptime%></div><div class="td left" id="uptime">-</div></div>
 		<div class="tr"><div class="td left" width="33%"><%:Load Average%></div><div class="td left" id="loadavg">-</div></div>
+		<div class="tr"><div class="td left" width="33%"><%:说点什么呢 ？%></div><div class="td left">A healthy society should not have only one voice</div></div>
 	</div>
 </div>
 

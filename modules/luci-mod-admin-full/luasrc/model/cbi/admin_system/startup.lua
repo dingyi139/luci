@@ -23,7 +23,7 @@ for _, name in ipairs(sys.init.names()) do
 end
 
 
-m = SimpleForm("initmgr", translate("Initscripts"), translate("You can enable or disable installed init scripts here. Changes will applied after a device reboot.<br /><strong>Warning: If you disable essential init scripts like \"network\", your device might become inaccessible!</strong>"))
+m = SimpleForm("initmgr", translate("Initscripts"))
 m.reset = false
 m.submit = false
 
@@ -78,8 +78,7 @@ stop.write = start.write
 
 
 
-f = SimpleForm("rc", translate("Local Startup"),
-	translate("This is the content of /etc/rc.local. Insert your own commands here (in front of 'exit 0') to execute them at the end of the boot process."))
+f = SimpleForm("rc", translate("Local Startup"))
 
 t = f:field(TextValue, "rcs")
 t.forcewrite = true

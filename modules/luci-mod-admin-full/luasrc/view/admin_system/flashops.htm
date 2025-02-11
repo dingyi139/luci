@@ -50,7 +50,6 @@
 					<input type="file" name="archive" id="archive" />
 					<input type="submit" class="cbi-button cbi-button-action important" name="restore" value="<%:Upload archive...%>" />
 					<% if reset_avail then %>
-						<div class="cbi-value-description"><%:Custom files (certificates, scripts) may remain on the system. To prevent this, perform a factory-reset first.%></div>
 					<% end %>
 				</div>
 			</div>
@@ -75,7 +74,7 @@
 					</div>
 				</div>
 				<div class="cbi-value cbi-value-last<% if image_invalid then %> cbi-value-error<% end %>">
-					<label class="cbi-value-title" for="image"><%:Image%>:</label>
+					<label class="cbi-value-title" for="image"><%:Firmware Image%>:</label>
 					<div class="cbi-value-field">
 						<input type="file" name="image" id="image" />
 						<input type="submit" class="cbi-button cbi-button-action important" value="<%:Flash image...%>" />

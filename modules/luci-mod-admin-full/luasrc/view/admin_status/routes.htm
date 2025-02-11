@@ -35,15 +35,14 @@
 
 <div class="cbi-map" id="cbi-network">
 	<h2 name="content"><%:Routes%></h2>
-	<div class="cbi-map-descr"><%:The following rules are currently active on this system.%></div>
-
+	
 	<div class="cbi-section">
 		<legend>ARP</legend>
 		<div class="cbi-section-node">
 			<div class="table">
 				<div class="tr table-titles">
-					<div class="th"><%_<abbr title="Internet Protocol Version 4">IPv4</abbr>-Address%></div>
-					<div class="th"><%_<abbr title="Media Access Control">MAC</abbr>-Address%></div>
+					<div class="th" style="width:200px"><%_<abbr title="Internet Protocol Version 4">IPv4</abbr>-Address%></div>
+					<div class="th" style="width:430px"><%_<abbr title="Media Access Control">MAC</abbr>-Address%></div>
 					<div class="th"><%:Interface%></div>
 				</div>
 
@@ -70,11 +69,11 @@
 		<div class="cbi-section-node">
 			<div class="table">
 				<div class="tr table-titles">
-					<div class="th"><%:Network%></div>
-					<div class="th"><%:Target%></div>
-					<div class="th"><%_<abbr title="Internet Protocol Version 4">IPv4</abbr>-Gateway%></div>
-					<div class="th"><%:Metric%></div>
-					<div class="th"><%:Table%></div>
+					<div class="th" style="width:180px"><%:Network%></div>
+					<div class="th" style="width:180px"><%:Target%></div>
+					<div class="th" style="width:180px"><%_<abbr title="Internet Protocol Version 4">IPv4</abbr>-Gateway%></div>
+					<div class="th" style="width:100px"><%:Metric%></div>
+					<div class="th" style="width:100px"><%:Table%></div>
 				</div>
 				<% for _, v in ipairs(ip.routes({ family = 4, type = 1 })) do %>
 				<div class="tr cbi-rowstyle-<%=(style and 1 or 2)%>">
@@ -98,11 +97,11 @@
 		<div class="cbi-section-node">
 			<div class="table">
 				<div class="tr table-titles">
-					<div class="th"><%:Network%></div>
-					<div class="th"><%:Target%></div>
-					<div class="th"><%:Source%></div>
-					<div class="th"><%:Metric%></div>
-					<div class="th"><%:Table%></div>
+					<div class="th" style="width:180px"><%:Network%></div>
+					<div class="th" style="width:180px"><%:Target%></div>
+					<div class="th" style="width:180px"><%:Source%></div>
+					<div class="th" style="width:100px"><%:Metric%></div>
+					<div class="th" style="width:100px"><%:Table%></div>
 				</div>
 				<%
 					for _, v in ipairs(ip.routes({ family = 6, type = 1 })) do
@@ -129,8 +128,8 @@
 		<div class="cbi-section-node">
 			<div class="table">
 				<div class="tr table-titles">
-					<div class="th"><%:IPv6-Address%></div>
-					<div class="th"><%:MAC-Address%></div>
+					<div class="th" style="width:200px"><%:IPv6-Address%></div>
+					<div class="th" style="width:430px"><%:MAC-Address%></div>
 					<div class="th"><%:Interface%></div>
 				</div>
 				<%

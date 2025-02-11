@@ -5,9 +5,7 @@ local wa = require "luci.tools.webadmin"
 local fs = require "nixio.fs"
 
 m = Map("network",
-	translate("Routes"),
-	translate("Routes specify over which interface and gateway a certain host or network " ..
-		"can be reached."))
+	translate("Routes"))
 
 s = m:section(TypedSection, "route", translate("Static IPv4 Routes"))
 s.addremove = true
@@ -18,23 +16,26 @@ s.template  = "cbi/tblsection"
 iface = s:option(ListValue, "interface", translate("Interface"))
 wa.cbi_add_networks(iface)
 
-t = s:option(Value, "target", translate("Target"), translate("Host-<abbr title=\"Internet Protocol Address\">IP</abbr> or Network"))
+t = s:option(Value, "target", translate("Target"))
 t.datatype = "ip4addr"
+t.size = 8
 t.rmempty = false
 
-n = s:option(Value, "netmask", translate("<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Netmask"), translate("if target is a network"))
+n = s:option(Value, "netmask", translate("<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Netmask"))
 n.placeholder = "255.255.255.255"
 n.datatype = "ip4addr"
+n.size = 8
 n.rmempty = true
 
 g = s:option(Value, "gateway", translate("<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Gateway"))
 g.datatype = "ip4addr"
+g.size = 8
 g.rmempty = true
 
 metric = s:option(Value, "metric", translate("Metric"))
 metric.placeholder = 0
 metric.datatype = "range(0,255)"
-metric.size = 5
+metric.size = 3
 metric.rmempty = true
 
 mtu = s:option(Value, "mtu", translate("MTU"))
@@ -65,7 +66,7 @@ if fs.access("/proc/net/ipv6_route") then
 	iface = s:option(ListValue, "interface", translate("Interface"))
 	wa.cbi_add_networks(iface)
 
-	t = s:option(Value, "target", translate("Target"), translate("<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Address or Network (CIDR)"))
+	t = s:option(Value, "target", translate("Target"))
 	t.datatype = "ip6addr"
 	t.rmempty = false
 

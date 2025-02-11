@@ -1,7 +1,7 @@
 -- Copyright 2008 Steven Barth <steven@midlink.org>
 -- Licensed to the public under the Apache License 2.0.
 
-m = Map("system", translate("<abbr title=\"Light Emitting Diode\">LED</abbr> Configuration"), translate("Customizes the behaviour of the device <abbr title=\"Light Emitting Diode\">LED</abbr>s if possible."))
+m = Map("system", translate("<abbr title=\"Light Emitting Diode\">LED</abbr> Configuration"))
 
 local sysfs_path = "/sys/class/leds/"
 local leds = {}

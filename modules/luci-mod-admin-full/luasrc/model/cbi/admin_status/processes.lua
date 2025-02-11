@@ -2,16 +2,16 @@
 -- Copyright 2008 Jo-Philipp Wich <jow@openwrt.org>
 -- Licensed to the public under the Apache License 2.0.
 
-f = SimpleForm("processes", translate("Processes"), translate("This list gives an overview over currently running system processes and their status."))
+f = SimpleForm("processes", translate("Processes"))
 f.reset = false
 f.submit = false
 
 t = f:section(Table, luci.sys.process.list())
 t:option(DummyValue, "PID", translate("PID"))
 t:option(DummyValue, "USER", translate("Owner"))
-t:option(DummyValue, "COMMAND", translate("Command"))
-t:option(DummyValue, "%CPU", translate("CPU usage (%)"))
-t:option(DummyValue, "%MEM", translate("Memory usage (%)"))
+t:option(Value, "COMMAND", translate("Command"))
+t:option(DummyValue, "%CPU", translate("CPU"))
+t:option(DummyValue, "%MEM", translate("Memory"))
 
 hup = t:option(Button, "_hup", translate("Hang Up"))
 hup.inputstyle = "reload"

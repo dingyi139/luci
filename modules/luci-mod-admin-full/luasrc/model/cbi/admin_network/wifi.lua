@@ -20,11 +20,7 @@ local acct_port, acct_secret, acct_server, anonymous_identity, ant1, ant2,
 
 arg[1] = arg[1] or ""
 
-m = Map("wireless", "",
-	translate("The <em>Device Configuration</em> section covers physical settings of the radio " ..
-		"hardware such as channel, transmit power or antenna selection which are shared among all " ..
-		"defined wireless networks (if the radio hardware is multi-SSID capable). Per network settings " ..
-		"like encryption or operation mode are grouped in the <em>Interface Configuration</em>."))
+m = Map("wireless", "")
 
 m:chain("network")
 m:chain("firewall")
@@ -204,7 +200,7 @@ end
 if hwtype == "mac80211" then
 	if #tx_power_list > 0 then
 		tp = s:taboption("general", ListValue,
-			"txpower", translate("Transmit Power"), "dBm")
+			"txpower", translate("Transmit Power"))
 		tp.rmempty = true
 		tp.default = tx_power_cur
 		function tp.cfgvalue(...)
@@ -220,21 +216,20 @@ if hwtype == "mac80211" then
 
 	local cl = iw and iw.countrylist
 	if cl and #cl > 0 then
-		cc = s:taboption("advanced", ListValue, "country", translate("Country Code"), translate("Use ISO/IEC 3166 alpha2 country codes."))
+		cc = s:taboption("advanced", ListValue, "country", translate("Country Code"))
 		cc.default = tostring(iw and iw.country or "00")
 		for _, c in ipairs(cl) do
 			cc:value(c.alpha2, "%s - %s" %{ c.alpha2, c.name })
 		end
 	else
-		s:taboption("advanced", Value, "country", translate("Country Code"), translate("Use ISO/IEC 3166 alpha2 country codes."))
+		s:taboption("advanced", Value, "country", translate("Country Code"))
 	end
 
 	legacyrates = s:taboption("advanced", Flag, "legacy_rates", translate("Allow legacy 802.11b rates"))
 	legacyrates.rmempty = false
 	legacyrates.default = "1"
 
-	s:taboption("advanced", Value, "distance", translate("Distance Optimization"),
-		translate("Distance to farthest network member in meters."))
+	s:taboption("advanced", Value, "distance", translate("Distance Optimization"))
 
 	-- external antenna profiles
 	local eal = iw and iw.extant
@@ -251,8 +246,7 @@ if hwtype == "mac80211" then
 	s:taboption("advanced", Value, "frag", translate("Fragmentation Threshold"))
 	s:taboption("advanced", Value, "rts", translate("RTS/CTS Threshold"))
 	
-	s:taboption("advanced", Flag, "noscan", translate("Force 40MHz mode"),
-		translate("Always use 40MHz channels even if the secondary channel overlaps. Using this option does not comply with IEEE 802.11n-2009!")).optional = true
+	s:taboption("advanced", Flag, "noscan", translate("Force 40MHz mode")).optional = true
 
 	beacon_int = s:taboption("advanced", Value, "beacon_int", translate("Beacon Interval"))
 	beacon_int.optional = true
@@ -266,7 +260,7 @@ end
 if hwtype == "broadcom" then
 	tp = s:taboption("general",
 		(#tx_power_list > 0) and ListValue or Value,
-		"txpower", translate("Transmit Power"), "dBm")
+		"txpower", translate("Transmit Power"))
 
 	tp.rmempty = true
 	tp.default = tx_power_cur
@@ -386,9 +380,7 @@ ssid:depends({mode="wds"})
 
 bssid = s:taboption("general", Value, "bssid", translate("<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"))
 
-network = s:taboption("general", Value, "network", translate("Network"),
-	translate("Choose the network(s) you want to attach to this wireless interface or " ..
-		"fill out the <em>create</em> field to define a new network."))
+network = s:taboption("general", Value, "network", translate("Network"))
 
 network.rmempty = true
 network.template = "cbi/network_netlist"
@@ -492,24 +484,22 @@ if hwtype == "mac80211" then
 	wmm:depends({mode="ap-wds"})
 	wmm.default = wmm.enabled
 
-	isolate = s:taboption("advanced", Flag, "isolate", translate("Isolate Clients"),
-	 translate("Prevents client-to-client communication"))
+	isolate = s:taboption("advanced", Flag, "isolate", translate("Isolate Clients"))
 	isolate:depends({mode="ap"})
 	isolate:depends({mode="ap-wds"})
 
-	ifname = s:taboption("advanced", Value, "ifname", translate("Interface name"), translate("Override default interface name"))
+	ifname = s:taboption("advanced", Value, "ifname", translate("Interface name"))
 	ifname.optional = true
 
 	short_preamble = s:taboption("advanced", Flag, "short_preamble", translate("Short Preamble"))
 	short_preamble.default = short_preamble.enabled
 
-	dtim_period = s:taboption("advanced", Value, "dtim_period", translate("DTIM Interval"), translate("Delivery Traffic Indication Message Interval"))
+	dtim_period = s:taboption("advanced", Value, "dtim_period", translate("DTIM Interval"))
 	dtim_period.optional = true
 	dtim_period.placeholder = 2
 	dtim_period.datatype = "range(1,255)"
 
-	disassoc_low_ack = s:taboption("advanced", Flag, "disassoc_low_ack", translate("Disassociate On Low Acknowledgement"),
-		translate("Allow AP mode to disconnect STAs based on low ACK condition"))
+	disassoc_low_ack = s:taboption("advanced", Flag, "disassoc_low_ack", translate("Disassociate On Low Acknowledgement"))
 	disassoc_low_ack.default = disassoc_low_ack.enabled
 end
 
@@ -525,8 +515,7 @@ if hwtype == "broadcom" then
 	hidden:depends({mode="adhoc"})
 	hidden:depends({mode="wds"})
 
-	isolate = s:taboption("advanced", Flag, "isolate", translate("Separate Clients"),
-	 translate("Prevents client-to-client communication"))
+	isolate = s:taboption("advanced", Flag, "isolate", translate("Separate Clients"))
 	isolate:depends({mode="ap"})
 
 	s:taboption("advanced", Flag, "doth", "802.11h")
@@ -658,10 +647,7 @@ if hwtype == "mac80211" or hwtype == "prism2" then
 			encr:value("wpa", "WPA-EAP", {mode="ap"}, {mode="ap-wds"})
 			encr:value("wpa2", "WPA2-EAP", {mode="ap"}, {mode="ap-wds"})
 		end
-		encr.description = translate(
-			"WPA-Encryption requires wpa_supplicant (for client mode) or hostapd (for AP " ..
-			"and ad-hoc mode) to be installed."
-		)
+		
 	elseif not hostapd and supplicant then
 		encr:value("psk", "WPA-PSK", {mode="sta"}, {mode="sta-wds"}, {mode="adhoc"})
 		encr:value("psk2", "WPA2-PSK", {mode="sta"}, {mode="sta-wds"}, {mode="adhoc"})
@@ -670,15 +656,9 @@ if hwtype == "mac80211" or hwtype == "prism2" then
 			encr:value("wpa", "WPA-EAP", {mode="sta"}, {mode="sta-wds"})
 			encr:value("wpa2", "WPA2-EAP", {mode="sta"}, {mode="sta-wds"})
 		end
-		encr.description = translate(
-			"WPA-Encryption requires wpa_supplicant (for client mode) or hostapd (for AP " ..
-			"and ad-hoc mode) to be installed."
-		)
+		
 	else
-		encr.description = translate(
-			"WPA-Encryption requires wpa_supplicant (for client mode) or hostapd (for AP " ..
-			"and ad-hoc mode) to be installed."
-		)
+		
 	end
 elseif hwtype == "broadcom" then
 	encr:value("psk", "WPA-PSK")
@@ -694,7 +674,7 @@ auth_server:depends({mode="ap-wds", encryption="wpa2"})
 auth_server.rmempty = true
 auth_server.datatype = "host(0)"
 
-auth_port = s:taboption("encryption", Value, "auth_port", translate("Radius-Authentication-Port"), translatef("Default %d", 1812))
+auth_port = s:taboption("encryption", Value, "auth_port", translate("Radius-Authentication-Port"))
 auth_port:depends({mode="ap", encryption="wpa"})
 auth_port:depends({mode="ap", encryption="wpa2"})
 auth_port:depends({mode="ap-wds", encryption="wpa"})
@@ -718,7 +698,7 @@ acct_server:depends({mode="ap-wds", encryption="wpa2"})
 acct_server.rmempty = true
 acct_server.datatype = "host(0)"
 
-acct_port = s:taboption("encryption", Value, "acct_port", translate("Radius-Accounting-Port"), translatef("Default %d", 1813))
+acct_port = s:taboption("encryption", Value, "acct_port", translate("Radius-Accounting-Port"))
 acct_port:depends({mode="ap", encryption="wpa"})
 acct_port:depends({mode="ap", encryption="wpa2"})
 acct_port:depends({mode="ap-wds", encryption="wpa"})
@@ -801,9 +781,7 @@ if hwtype == "mac80211" or hwtype == "prism2" then
 	local has_80211r = (os.execute("hostapd -v11r 2>/dev/null || hostapd -veap 2>/dev/null") == 0)
 
 	ieee80211r = s:taboption("encryption", Flag, "ieee80211r",
-		translate("802.11r Fast Transition"),
-		translate("Enables fast roaming among access points that belong " ..
-			"to the same Mobility Domain"))
+		translate("802.11r Fast Transition"))
 	ieee80211r:depends({mode="ap", encryption="wpa"})
 	ieee80211r:depends({mode="ap", encryption="wpa2"})
 	ieee80211r:depends({mode="ap-wds", encryption="wpa"})
@@ -818,9 +796,7 @@ if hwtype == "mac80211" or hwtype == "prism2" then
 	end
 	ieee80211r.rmempty = true
 
-	nasid = s:taboption("encryption", Value, "nasid", translate("NAS ID"),
-		translate("Used for two different purposes: RADIUS NAS ID and " ..
-			"802.11r R0KH-ID. Not needed with normal WPA(2)-PSK."))
+	nasid = s:taboption("encryption", Value, "nasid", translate("NAS ID"))
 	nasid:depends({mode="ap", encryption="wpa"})
 	nasid:depends({mode="ap", encryption="wpa2"})
 	nasid:depends({mode="ap-wds", encryption="wpa"})
@@ -829,16 +805,14 @@ if hwtype == "mac80211" or hwtype == "prism2" then
 	nasid.rmempty = true
 
 	mobility_domain = s:taboption("encryption", Value, "mobility_domain",
-			translate("Mobility Domain"),
-			translate("4-character hexadecimal ID"))
+			translate("Mobility Domain"))
 	mobility_domain:depends({ieee80211r="1"})
 	mobility_domain.placeholder = "4f57"
 	mobility_domain.datatype = "and(hexstring,rangelength(4,4))"
 	mobility_domain.rmempty = true
 
 	reassociation_deadline = s:taboption("encryption", Value, "reassociation_deadline",
-		translate("Reassociation Deadline"),
-		translate("time units (TUs / 1.024 ms) [1000-65535]"))
+		translate("Reassociation Deadline"))
 	reassociation_deadline:depends({ieee80211r="1"})
 	reassociation_deadline.placeholder = "1000"
 	reassociation_deadline.datatype = "range(1000,65535)"
@@ -851,22 +825,20 @@ if hwtype == "mac80211" or hwtype == "prism2" then
 	ft_protocol.rmempty = true
 
 	ft_psk_generate_local = s:taboption("encryption", Flag, "ft_psk_generate_local",
-		translate("Generate PMK locally"),
-		translate("When using a PSK, the PMK can be automatically generated. When enabled, the R0/R1 key options below are not applied. Disable this to use the R0 and R1 key options."))
+		translate("Generate PMK locally"))
 	ft_psk_generate_local:depends({ieee80211r="1"})
 	ft_psk_generate_local.default = ft_psk_generate_local.enabled
 	ft_psk_generate_local.rmempty = false
 
 	r0_key_lifetime = s:taboption("encryption", Value, "r0_key_lifetime",
-			translate("R0 Key Lifetime"), translate("minutes"))
+			translate("R0 Key Lifetime"))
 	r0_key_lifetime:depends({ieee80211r="1"})
 	r0_key_lifetime.placeholder = "10000"
 	r0_key_lifetime.datatype = "uinteger"
 	r0_key_lifetime.rmempty = true
 
 	r1_key_holder = s:taboption("encryption", Value, "r1_key_holder",
-			translate("R1 Key Holder"),
-			translate("6-octet identifier as a hex string - no colons"))
+			translate("R1 Key Holder"))
 	r1_key_holder:depends({ieee80211r="1"})
 	r1_key_holder.placeholder = "00004f577274"
 	r1_key_holder.datatype = "and(hexstring,rangelength(12,12))"
@@ -877,21 +849,11 @@ if hwtype == "mac80211" or hwtype == "prism2" then
 	pmk_r1_push.placeholder = "0"
 	pmk_r1_push.rmempty = true
 
-	r0kh = s:taboption("encryption", DynamicList, "r0kh", translate("External R0 Key Holder List"),
-		translate("List of R0KHs in the same Mobility Domain. " ..
-			"<br />Format: MAC-address,NAS-Identifier,128-bit key as hex string. " ..
-			"<br />This list is used to map R0KH-ID (NAS Identifier) to a destination " ..
-			"MAC address when requesting PMK-R1 key from the R0KH that the STA " ..
-			"used during the Initial Mobility Domain Association."))
+	r0kh = s:taboption("encryption", DynamicList, "r0kh", translate("External R0 Key Holder List"))
 	r0kh:depends({ieee80211r="1"})
 	r0kh.rmempty = true
 
-	r1kh = s:taboption("encryption", DynamicList, "r1kh", translate("External R1 Key Holder List"),
-		translate ("List of R1KHs in the same Mobility Domain. "..
-			"<br />Format: MAC-address,R1KH-ID as 6 octets with colons,128-bit key as hex string. "..
-			"<br />This list is used to map R1KH-ID to a destination MAC address " ..
-			"when sending PMK-R1 key from the R0KH. This is also the " ..
-			"list of authorized R1KHs in the MD that can request PMK-R1 keys."))
+	r1kh = s:taboption("encryption", DynamicList, "r1kh", translate("External R1 Key Holder List"))
 	r1kh:depends({ieee80211r="1"})
 	r1kh.rmempty = true
 	-- End of 802.11r options
@@ -1039,10 +1001,7 @@ if hwtype == "mac80211" then
 	local has_80211w = (os.execute("hostapd -v11w 2>/dev/null || hostapd -veap 2>/dev/null") == 0)
 	if has_80211w then
 		ieee80211w = s:taboption("encryption", ListValue, "ieee80211w",
-			translate("802.11w Management Frame Protection"),
-			translate("Requires the 'full' version of wpad/hostapd " ..
-				"and support from the wifi driver <br />(as of Feb 2017: " ..
-				"ath9k and ath10k, in LEDE also mwlwifi and mt76)"))
+			translate("802.11w Management Frame Protection"))
 		ieee80211w.default = ""
 		ieee80211w.rmempty = true
 		ieee80211w:value("", translate("Disabled (default)"))
@@ -1056,8 +1015,7 @@ if hwtype == "mac80211" then
 		ieee80211w:depends({mode="ap-wds", encryption="psk-mixed"})
 
 		max_timeout = s:taboption("encryption", Value, "ieee80211w_max_timeout",
-				translate("802.11w maximum timeout"),
-				translate("802.11w Association SA Query maximum timeout"))
+				translate("802.11w maximum timeout"))
 		max_timeout:depends({ieee80211w="1"})
 		max_timeout:depends({ieee80211w="2"})
 		max_timeout.datatype = "uinteger"
@@ -1065,8 +1023,7 @@ if hwtype == "mac80211" then
 		max_timeout.rmempty = true
 
 		retry_timeout = s:taboption("encryption", Value, "ieee80211w_retry_timeout",
-				translate("802.11w retry timeout"),
-				translate("802.11w Association SA Query retry timeout"))
+				translate("802.11w retry timeout"))
 		retry_timeout:depends({ieee80211w="1"})
 		retry_timeout:depends({ieee80211w="2"})
 		retry_timeout.datatype = "uinteger"
@@ -1075,8 +1032,7 @@ if hwtype == "mac80211" then
 	end
 
 	key_retries = s:taboption("encryption", Flag, "wpa_disable_eapol_key_retries",
-		translate("Enable key reinstallation (KRACK) countermeasures"),
-		translate("Complicates key reinstallation attacks on the client side by disabling retransmission of EAPOL-Key frames that are used to install keys. This workaround might cause interoperability issues and reduced robustness of key negotiation especially in environments with heavy traffic load."))
+		translate("Enable key reinstallation (KRACK) countermeasures"))
 
 	key_retries:depends({mode="ap", encryption="wpa2"})
 	key_retries:depends({mode="ap", encryption="psk2"})

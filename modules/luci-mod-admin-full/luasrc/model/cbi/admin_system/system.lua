@@ -10,7 +10,7 @@ local conf  = require "luci.config"
 local m, s, o
 local has_ntpd = fs.access("/usr/sbin/ntpd")
 
-m = Map("system", translate("System"), translate("Here you can configure the basic aspects of your device like its hostname or the timezone."))
+m = Map("system", translate("System"))
 m:chain("luci")
 
 
@@ -65,7 +65,7 @@ end
 -- Logging
 --
 
-o = s:taboption("logging", Value, "log_size", translate("System log buffer size"), "kiB")
+o = s:taboption("logging", Value, "log_size", translate("System log buffer size"))
 o.optional    = true
 o.placeholder = 16
 o.datatype    = "uinteger"
@@ -110,7 +110,6 @@ o:value(9, translate("Warning"))
 --
 
 o = s:taboption("language", ListValue, "_lang", translate("Language"))
-o:value("auto")
 
 local i18ndir = luci.i18n.i18ndir .. "base."
 for k, v in luci.util.kspairs(conf.languages) do
@@ -155,7 +154,7 @@ if has_ntpd then
 	if m:formvalue("cbid.system._timeserver._enable") then
 		m.uci:section("system", "timeserver", "ntp",
 			{
-                	server = { "0.openwrt.pool.ntp.org", "1.openwrt.pool.ntp.org", "2.openwrt.pool.ntp.org", "3.openwrt.pool.ntp.org" }
+                	server = { "pool.ntp.org" }
 			}
 		)
 
