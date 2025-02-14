@@ -28,8 +28,8 @@ msgstr "端口"
 msgid "Token"
 msgstr "令牌"
 
-msgid "User"
-msgstr "用户名"
+msgid "User Name"
+msgstr "名称"
 
 msgid "Vhost HTTP Port"
 msgstr "HTTP 端口"
