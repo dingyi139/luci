@@ -36,7 +36,7 @@ e.optional = false
 e.password = true
 e.rmempty = false
 
-e = t:taboption("base", Value, "user", translate("User"))
+e = t:taboption("base", Value, "user", translate("User Name"))
 e.optional = true
 e.default = ""
 e.rmempty = false
