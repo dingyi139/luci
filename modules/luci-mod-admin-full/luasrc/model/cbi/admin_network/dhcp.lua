@@ -17,9 +17,6 @@ s:tab("files", translate("Resolv and Hosts Files"))
 s:tab("tftp", translate("TFTP Settings"))
 s:tab("advanced", translate("Advanced Settings"))
 
-s:taboption("general", Flag, "domainneeded",
-	translate("Domain required"))
-
 s:taboption("general", Flag, "authoritative",
 	translate("Authoritative"))
 
