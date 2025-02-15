@@ -3,7 +3,7 @@ config global
 	option enable '0'
 
 config user
-	option enable '0'
+	option enable '1'
 	option remarks '127.0.0.1'
 	option protocol 'vmess'
 	option port '20010'
