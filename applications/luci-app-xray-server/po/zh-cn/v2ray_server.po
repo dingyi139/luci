@@ -1,5 +1,5 @@
 msgid "V2ray Server"
-msgstr "V2ray 服务器"
+msgstr "XRay 服务器"
 
 msgid "Global Settings"
 msgstr "全局设置"
