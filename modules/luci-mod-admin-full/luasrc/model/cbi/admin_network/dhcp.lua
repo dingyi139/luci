@@ -48,9 +48,6 @@ bp = s:taboption("advanced", Flag, "boguspriv",
 	translate("Filter private"))
 bp.default = bp.enabled
 
-s:taboption("advanced", Flag, "filterwin2k",
-	translate("Filter useless"))
-
 s:taboption("advanced", Flag, "localise_queries",
 	translate("Localise queries"))
 
