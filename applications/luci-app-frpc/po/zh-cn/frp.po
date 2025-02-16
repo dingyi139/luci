@@ -68,7 +68,7 @@ msgid "Connection Pool"
 msgstr "预创建连接数量"
 
 msgid "Service registration interval"
-msgstr "注册间隔分钟"
+msgstr "注册间隔: 分钟"
 
 msgid "Logging Level"
 msgstr "日志记录等级"
