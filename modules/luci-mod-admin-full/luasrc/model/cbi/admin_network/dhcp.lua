@@ -44,10 +44,6 @@ qu = s:taboption("advanced", Flag, "quietdhcp",
 	translate("Suppress logging"))
 qu.optional = true
 
-se = s:taboption("advanced", Flag, "sequential_ip",
-	translate("Allocate IP sequentially"))
-se.optional = true
-
 bp = s:taboption("advanced", Flag, "boguspriv",
 	translate("Filter private"))
 bp.default = bp.enabled
